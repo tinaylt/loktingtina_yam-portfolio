@@ -1,2 +1,24 @@
-@forward 'home';
+@forward 'project';
 @forward 'contact';
+
+@use '../abstracts/variables' as v;
+
+/*Basic html reset*/
+
+html {
+    font-family: v.$base-font-family;
+}
+
+h2 h3 h4 h5 h6 {
+    color: v.$body-text-colour;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ 
+a {
+    text-decoration: none;
+}
