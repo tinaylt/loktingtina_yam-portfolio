@@ -4,14 +4,126 @@
 <head>
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Tina's Portfolio</title>
+    <!--link to Font Awesome-->
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
 
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+        <h2 class="hidden">Tina's Portfolio</h2>
+        <div id="sticky-nav" class="grid-con">
+            
+            <div id="main-logo" class="col-start-1 col-end-4">
+                <img src="images/logo-final.svg" alt="logo">
+            </div>
+
+            <div id="burger-icon" class="col-start-4 col-end-5">
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+
+            <div class="col-span-full">
+                <nav id="mobile-nav" class="hide">
+                    <ul>
+                        <li><p><a href="#sticky-nav">Home</a></p></li>
+                        <li><p><a href="#project">Projects</a></p></li>
+                        <li><p><a href="contact.html">Contact</a></p></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="grid-con">
+        <h2 class="hidden">Welcome!</h2>
+        <div class="col-span-full full-width-grid-con">
+            <img src="images/gradient-bg-03.png" alt="hero background">
+        </div>
+
+        <div class="col-span-full">
+            <div class="box">
+                <p>HELLO! I am TINA</p><i class="fa-sharp fa-solid fa-check"></i>
+            </div>
+
+            <div class="box">
+                <p>A Front End Developer and Digital Designer</p><i class="fa-sharp fa-solid fa-check"></i>
+            </div>
+
+            <div class="box">
+                <div>
+                <img src="images/about-me-img.jpg" alt="personal photo">
+                </div>
+
+                <p>Want to know more about me?</p><i class="fa-sharp fa-solid fa-check"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid-con">
+        <h2 class="col-span-full">Project section</h2>
+
+        <div class="box col-span-full">
+            <h3>Burple</h3>
+            <p>Rebranding</p>
+            <div>
+                <img src="images/burple-img-placegolder.jpg" alt="project thumbnail">
+            </div>
+        </div>
+
+        <div class="box col-span-full">
+            <h3>Project Title</h3>
+            <p>Web Development</p>
+            <div>
+                <img src="images/project-place-holder2.jpg" alt="project thumbnail">
+            </div>
+        </div>
+
+        <div class="box col-span-full">
+            <h3>Project Title</h3>
+            <p>Product Design</p>
+            <div>
+                <img src="images/project-place-holder3.jpg" alt="project thumbnail">
+            </div>
+        </div>
+
+        <div class="box col-span-full">
+            <h3>Project Title</h3>
+            <p>Product Design</p>
+            <div>
+                <img src="images/project-place-holder4.jpg" alt="project thumbnail">
+            </div>
+        </div>
+
+        <div class="box col-span-full">
+            <h3>Project Title</h3>
+            <p>Web Development</p>
+            <div>
+                <img src="images/project-place-holder5.jpg" alt="project thumbnail">
+            </div>
+        </div>
+
+        <div class="box col-span-full">
+            <h3>Project Title</h3>
+            <p>Motion Design</p>
+            <div>
+                <img src="images/project-place-holder6.jpg" alt="project thumbnail">
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="grid-con">
+        <div class="box col-start-1 col-end-3">
+            <p>	&#169; 2024</p>
+        </div>
+
+        <div class="box col-start-3 col-end-5">
+            Designed by Tina
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 
 
