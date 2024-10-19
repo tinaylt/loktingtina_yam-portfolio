@@ -36,38 +36,45 @@
         </div>
     </header>
 
-    <section id="hero" class="grid-con">
+    <section class="full-width-grid-con">
         <h2 class="hidden">Welcome!</h2>
-        <div class="col-span-full full-width-grid-con">
-            <img src="images/gradient-bg-03.png" alt="hero background">
+        
+        <div id="hero">
+            <img src="images/gradient-bg.jpg" alt="hero background">
         </div>
 
-        <div class="col-span-full">
-            <div class="box">
-                <p>HELLO! I am TINA</p><i class="fa-sharp fa-solid fa-check"></i>
+        <div id="header-message" class="col-span-full">
+            <div class="message-box">
+                <p>HELLO! I am TINA!</p><i class="fa-sharp fa-solid fa-check"></i>
             </div>
 
-            <div class="box">
+            <div class="message-box">
                 <p>A Front End Developer and Digital Designer</p><i class="fa-sharp fa-solid fa-check"></i>
             </div>
 
-            <div class="box">
-                <div>
+            <div class="message-box">
+                <div id="about-img-container">
                 <img src="images/about-me-img.jpg" alt="personal photo">
                 </div>
 
                 <p>Want to know more about me?</p><i class="fa-sharp fa-solid fa-check"></i>
             </div>
+
+            <div id="video-container">
+                <video controls preload="metadata" poster="">
+                    <source src="video/video-placeholder.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
     </section>
 
-    <section class="grid-con">
-        <h2 class="col-span-full">Project section</h2>
+    <section id="projects" class="grid-con">
+        <h2 class="col-span-full box">Project section</h2>
 
         <div class="box col-span-full">
             <h3>Burple</h3>
             <p>Rebranding</p>
-            <div>
+            <div class="project-thumbnail">
                 <img src="images/burple-img-placegolder.jpg" alt="project thumbnail">
             </div>
         </div>
