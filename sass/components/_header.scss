@@ -1,7 +1,9 @@
 @use '../abstracts/variables' as v;
 
+
 #sticky-nav {
-    margin: 30px 15px;
+    padding: 30px 30px;
+    background-color: v.$primary-colour;
 }
 
 #burger-icon {
@@ -20,7 +22,7 @@
     height: 4px;
     background-color: v.$body-text-colour;
     margin-bottom: 6px;
-    border-radius: 10%;
+    border-radius: 15px;
     transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out;
 }
 
@@ -29,7 +31,7 @@
   }
 
 #main-logo {
-    width: 200px;
+    width: 160px;
 }
 
 #burger-icon.active .line:nth-child(1) {
@@ -39,14 +41,6 @@
 #burger-icon.active .line:nth-child(2) {
     transform: rotate(-35deg) translate(0px, -6px);
 }
-
-// #burger-icon .line:nth-child(1) {
-//     transform: rotate(0deg) translate(0px, 0px); /* Initial state */
-// }
-
-// #burger-icon .line:nth-child(2) {
-//     transform: rotate(0deg) translate(0px, 0px); /* Initial state */
-// }
 
 #mobile-nav {
     position: absolute;
@@ -74,4 +68,44 @@
 
 .hide {
     display: none;
+}
+
+#hero {
+    position: relative;
+}
+
+#hero {
+    grid-column: 1/-1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#hero img {
+    width: 100%;
+    justify-self: center;
+    height: 700px;
+}
+
+.message-box {
+    margin: 10px;
+    background-color: v.$secondary-colour;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+#header-message {
+    grid-row-start: 1;
+    z-index: 4;
+    margin: 60px 40px;
+}
+
+#about-img-container {
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+}
+
+#about-img-container img {
+    object-fit: contain;
 }

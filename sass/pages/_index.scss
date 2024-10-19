@@ -22,3 +22,18 @@ li {
 a {
     text-decoration: none;
 }
+
+//Video Container//
+
+#video-container {
+    border: 20px solid v.$secondary-colour;
+    margin: 60px 20px;
+}
+
+
+//Projects//
+
+.project-thumbnail img {
+    display: block;
+    text-align: center;
+}
