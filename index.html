@@ -36,14 +36,29 @@
         </div>
     </header>
 
-    <section class="full-width-grid-con">
+    <section  id="hero" class="full-width-grid-con">
         <h2 class="hidden">Welcome!</h2>
         
-        <div id="hero">
-            <img src="images/gradient-bg.jpg" alt="hero background">
-        </div>
+        <img
+        sizes="(max-width: 1400px) 100vw, 1400px"
+        srcset="
+        images/gradient-bg_bqemjt_c_scale,w_200.jpg 200w,
+        images/gradient-bg_bqemjt_c_scale,w_641.jpg 641w,
+        images/gradient-bg_bqemjt_c_scale,w_807.jpg 807w,
+        images/gradient-bg_bqemjt_c_scale,w_923.jpg 923w,
+        images/gradient-bg_bqemjt_c_scale,w_1004.jpg 1004w,
+        images/gradient-bg_bqemjt_c_scale,w_1099.jpg 1099w,
+        images/gradient-bg_bqemjt_c_scale,w_1182.jpg 1182w,
+        images/gradient-bg_bqemjt_c_scale,w_1258.jpg 1258w,
+        images/gradient-bg_bqemjt_c_scale,w_1330.jpg 1330w,
+        images/gradient-bg_bqemjt_c_scale,w_1399.jpg 1399w,
+        images/gradient-bg_bqemjt_c_scale,w_1397.jpg 1397w,
+        images/gradient-bg_bqemjt_c_scale,w_1400.jpg 1400w"
+        src="images/gradient-bg_bqemjt_c_scale,w_1400.jpg"
+        alt="" id="hero-img">
 
-        <div id="header-message" class="col-span-full m-col-start-2 m-col-end-11 xl-col-start-2 xl-col-end-10">
+        <div class="grid-con">
+        <div id="header-message" class="col-span-full m-col-start-2 m-col-end-11 l-col-start-1 l-col-end-13">
             <div class="message-box">
                 <p>HELLO! I am TINA!</p><i class="fa-sharp fa-solid fa-check"></i>
             </div>
@@ -54,24 +69,38 @@
 
             <div id="about-me-message" class="message-box">
                 <div id="about-img-container">
-                <img src="images/about-me-img.jpg" alt="personal photo">
+                    <img
+                    sizes="(max-width: 1400px) 100vw, 1400px"
+                    srcset="
+                    images/about-me-img_cm8wlz_c_scale,w_200.jpg 200w,
+                    images/about-me-img_cm8wlz_c_scale,w_533.jpg 533w,
+                    images/about-me-img_cm8wlz_c_scale,w_789.jpg 789w,
+                    images/about-me-img_cm8wlz_c_scale,w_950.jpg 950w,
+                    images/about-me-img_cm8wlz_c_scale,w_1090.jpg 1090w,
+                    images/about-me-img_cm8wlz_c_scale,w_1218.jpg 1218w,
+                    images/about-me-img_cm8wlz_c_scale,w_1331.jpg 1331w,
+                    images/about-me-img_cm8wlz_c_scale,w_1397.jpg 1397w,
+                    images/about-me-img_cm8wlz_c_scale,w_1400.jpg 1400w"
+                    src=" images/about-me-img_cm8wlz_c_scale,w_1400.jpg"
+                    alt="personal image">
                 </div>
 
                 <p>Want to know more about me?</p><i class="fa-sharp fa-solid fa-check"></i>
             </div>
 
-            <div id="video-container" class="col-span-full m-col-span-full xl-col-start-2 xl-col-end-10">
+            <div id="video-container">
                 <video controls preload="metadata">
                     <source src="video/video-placeholder.mp4" type="video/mp4">
                 </video>
             </div>
+        </div>
         </div>
     </section>
 
     <section id="projects" class="grid-con">
         <h2 class="col-span-full">Project section</h2>
 
-        <div class="col-span-full m-col-start-1 m-col-end-7 xl-col-start-1 xl-col-end-5 project-container">
+        <div class="col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-5 project-container">
             <h3>Burple</h3>
             <p>Rebranding</p>
             <div class="project-thumbnail">
@@ -79,7 +108,7 @@
             </div>
         </div>
 
-        <div class="col-span-full m-col-start-7 m-col-end-13 xl-col-start-5 xl-col-end-9   project-container">
+        <div class="col-span-full m-col-start-7 m-col-end-13 l-col-start-5 l-col-end-9   project-container">
             <h3>Project Title</h3>
             <p>Web Development</p>
             <div class="project-thumbnail">
@@ -87,7 +116,7 @@
             </div>
         </div>
 
-        <div class="col-span-full m-col-start-1 m-col-end-7 xl-col-start-9 xl-col-end-13 project-container">
+        <div class="col-span-full m-col-start-1 m-col-end-7 l-col-start-9 l-col-end-13 project-container">
             <h3>Project Title</h3>
             <p>Product Design</p>
             <div class="project-thumbnail">
@@ -95,7 +124,7 @@
             </div>
         </div>
 
-        <div class="col-span-full m-col-start-7 m-col-end-13 xl-col-start-1 xl-col-end-5 project-container">
+        <div class="col-span-full m-col-start-7 m-col-end-13 l-col-start-1 l-col-end-5 project-container">
             <h3>Project Title</h3>
             <p>Product Design</p>
             <div class="project-thumbnail">
@@ -103,7 +132,7 @@
             </div>
         </div>
 
-        <div class="col-span-full m-col-start-1 m-col-end-7 xl-col-start-5 xl-col-end-9 project-container">
+        <div class="col-span-full m-col-start-1 m-col-end-7 l-col-start-5 l-col-end-9 project-container">
             <h3>Project Title</h3>
             <p>Web Development</p>
             <div class="project-thumbnail">
@@ -111,7 +140,7 @@
             </div>
         </div>
 
-        <div class="col-span-full m-col-start-7 m-col-end-13 xl-col-start-9 xl-col-end-13 project-container">
+        <div class="col-span-full m-col-start-7 m-col-end-13 l-col-start-9 l-col-end-13 project-container">
             <h3>Project Title</h3>
             <p>Motion Design</p>
             <div class="project-thumbnail">
@@ -123,7 +152,8 @@
 
     <footer>
         <div id="footer" class="grid-con">
-            <div class="copyright col-start-1 col-end-3 m-col-start-1 m-col-end-8">
+
+            <div class="copyright col-start-1 col-end-3 m-col-start-1 m-col-end-8 lc">
                 <p>	&#169; 2024</p>
             </div>
 
@@ -131,6 +161,7 @@
                 <p>Designed by Tina Yam</p>
             </div>
         </div>
+
     </footer>
     <script src="js/main.js"></script>
 </body>
