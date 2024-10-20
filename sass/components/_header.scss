@@ -4,6 +4,8 @@
 #sticky-nav {
     padding: 30px 30px;
     background-color: v.$primary-colour;
+    max-width: fit-content;
+    // width: 100vw;
 }
 
 #burger-icon {
@@ -12,9 +14,9 @@
     display: flex;
     cursor: pointer;
     flex-direction: column;
-    margin-left: 40px;
     justify-content: center;
-    z-index: 3;
+    z-index: 6;
+    grid-column: 5;
 }
 
 .line {
@@ -32,6 +34,7 @@
 
 #main-logo {
     width: 160px;
+    grid-column: 1;
 }
 
 #burger-icon.active .line:nth-child(1) {
@@ -50,7 +53,7 @@
     top: 0;
     left: 0;
     padding-top: 40%;
-    z-index: 2;
+    z-index: 5;
 }
 
 #mobile-nav ul li {
@@ -71,13 +74,10 @@
 }
 
 #hero {
-    position: relative;
-}
-
-#hero {
     grid-column: 1/-1;
     grid-row-start: 1;
     grid-row-end: 3;
+    position: relative;
 }
 
 #hero img {
@@ -90,7 +90,7 @@
     margin: 10px;
     background-color: v.$secondary-colour;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: v.$base-border;
 }
 
 
@@ -101,11 +101,88 @@
 }
 
 #about-img-container {
-    width: 200px;
+    width: 250px;
     height: 250px;
     overflow: hidden;
 }
 
 #about-img-container img {
     object-fit: contain;
+}
+
+#about-me-message {
+    width: 270px;
+}
+
+@media screen and (min-width: 768px) {
+
+    #sticky-nav {
+        padding: 30px 10px;
+    }
+    
+    #burger-icon {
+        display: none;
+    }
+
+    .hide {
+        display: block;
+    }
+
+    #main-logo {
+        margin-left: 60%;
+        width: 200px;
+        padding-top: 10px;
+    }
+
+    #mobile-nav {
+        position: relative;
+        width: 100vw;
+        height: 0;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        padding-top: 0;
+    }
+
+    #mobile-nav ul {
+        display: flex;
+        padding-top: 20px;
+    }
+    
+    #mobile-nav ul li {
+        margin-left: 0;
+        border-bottom: 0;
+        padding: 0 0;
+    }
+
+    #mobile-nav ul li p {
+        padding-right: 30px;
+        margin: auto;
+    }
+
+
+    
+}
+
+@media screen and (min-width: 1200px) {
+
+    #main-logo {
+        margin-left: 120%;
+        width: 250px;
+    }
+
+    #mobile-nav {
+        margin-left: 30px;
+    }
+
+    #mobile-nav ul {
+        padding-top: 30px;
+    }
+
+    #mobile-nav ul li p {
+        padding-right: 90px;
+    }
+    
+
+    
 }
