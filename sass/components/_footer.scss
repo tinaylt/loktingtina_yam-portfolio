@@ -1,15 +1,23 @@
 @use '../abstracts/variables' as v;
 
-#footer {
+
+footer {
     background-color: v.$primary-colour;
-    padding: 20px;
-    color: v.$body-text-colour;
-    width: 100%;
 }
 
-.mark {
+#footer {
+    padding: 20px 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#footer .mark {
     text-align: right;
 }
+
+// @media screen and (min-width: 768px) {
+
+// }
 
 @media screen and (min-width: 1200px) {
     
