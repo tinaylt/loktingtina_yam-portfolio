@@ -92,6 +92,15 @@
                 <video controls preload="metadata">
                     <source src="video/video-placeholder.mp4" type="video/mp4">
                 </video>
+
+                <div class="video-controls hidden" id="video-controls">
+                    <button id="play-button"><i class="fa-solid fa-play"></i></button>
+                            <button id="pause-button"><i class="fa-solid fa-pause"></i></button>
+                            <button id="stop-button"><i class="fa-solid fa-stop"></i></button>
+                            <i class="fa fa-volume-up"></i>
+                            <input type="range" id="change-vol" step="0.05" min="0" max="1" value="1">
+                            <button id="full-screen"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                </div>
             </div>
         </div>
         </div>
