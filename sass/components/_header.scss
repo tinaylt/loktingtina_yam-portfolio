@@ -6,8 +6,6 @@ header {
 
 #sticky-nav {
     padding: 30px 30px;
-    // max-width: fit-content;
-    // width: 100vw;
 }
 
 #burger-icon {
@@ -49,13 +47,13 @@ header {
 
 #mobile-nav {
     position: absolute;
-    width: 500px;
-    height: 100vh;
     background-color: v.$secondary-colour;
     top: 0;
     left: 0;
     padding-top: 40%;
     z-index: 5;
+    width: 100vw;
+    height: 100vh;
 }
 
 #mobile-nav ul li {
