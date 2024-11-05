@@ -1,0 +1,47 @@
+@use '../abstracts/variables' as v;
+
+//project details//
+
+#projects-details {
+    background-color: v.$secondary-colour;
+    margin: 15px;
+    border-radius: 30px;
+    padding: 15px 0;
+
+    div img {
+        display: block;
+        margin: 0 auto;
+        width: 400px;
+    }
+
+    div ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    h3, p {
+        padding: 0 20px;
+    }
+
+    p {
+        line-height: 23px;
+    }
+
+    .paragraph {
+        border-bottom: 3px solid v.$base-colour;
+        margin-top: 30px;
+        padding-bottom: 30px;
+    }
+
+
+}
+
+.project-image {
+    background-color: v.$base-colour;
+    margin: 20px;
+    padding: 15px 0;
+}
+
+
+
+
