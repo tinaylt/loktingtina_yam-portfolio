@@ -1,0 +1,107 @@
+@use '../abstracts/variables' as v;
+
+
+/*Basic html reset*/
+
+img, embed, object, video, picture {
+    max-width: 100%; 
+}
+
+body, p, h1, h2, h3, h4, h5 {
+    margin: 0px; 
+    padding: 0px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html {
+    font-family: v.$base-font-family;
+    box-sizing: border-box; 
+}
+
+h2 h3 h4 h5 h6 {
+    color: v.$body-text-colour;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ 
+a {
+    text-decoration: none;
+}
+
+//Video Container//
+
+#video-container {
+    border: 20px solid v.$secondary-colour;
+    margin: 100px 20px 30px 20px;
+}
+
+
+
+
+//Projects//
+
+#projects {
+    margin-bottom: 20px;
+}
+
+#projects .project-thumbnail {
+    text-align: center;
+}
+
+.project-thumbnail {
+    margin: 20px 15px;
+    padding: 20px 20px;
+    background-color: v.$base-colour;
+}
+
+
+.project-container {
+    background-color: v.$secondary-colour;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 10px 10px;
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 4px rgb(184, 184, 184));
+    transition: transform 0.4s ease-in;
+}
+
+.project-container:hover {
+    transform: scale(1.025);
+}
+
+.project-container p {
+    margin-left: 20px;
+}
+
+.project-container h3 {
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 1200px) {
+
+    .project-container {
+        padding: 5px;
+        margin: 10px 0px;
+    }
+
+    .project-container p {
+        margin-left: 20px;
+    }
+    
+    .project-container h3 {
+        margin-left: 20px;
+        padding-top: 10px;
+    }
+}
