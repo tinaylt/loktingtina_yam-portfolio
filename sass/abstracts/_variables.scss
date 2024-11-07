@@ -1,10 +1,19 @@
 @use 'fonts';
 //font//
 $base-font-family: 'lato',sans-serif, Helvetica;
-$mobile-base-font-size: 12px;
-$mobile-header-size: 20px;
-$base-font-weight: 400;
+$mobile-base-font-size: 14px;
+$mobile-header-size: 17px;
+$base-font-weight: 300;
 $mobile-font-bold: 700;
+
+//tablet font//
+$tablet-header-font-size: 17px;
+$tablet-body-font-size: 12px;
+
+//Desktop font//
+$desktop-header-font-size: 25px;
+$desltop-body-font-size: 18px;
+
 
 //colour//
 $primary-colour: #EFEF6E;
