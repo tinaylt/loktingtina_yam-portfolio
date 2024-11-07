@@ -2,64 +2,241 @@
 
 //project details//
 
+
 #projects-details {
     background-color: v.$secondary-colour;
-    margin: 15px 15px;
     border-radius: 30px;
     padding: 30px 0;
+    margin: 15px;
+    position: relative;
+    
 
     div img {
         display: block;
         margin: 0 auto;
-        width: 390px;
+        height: auto;
+        width: auto;
     }
 
     div ul {
         margin: 0;
         padding: 0;
+        display: flex;
+        width: auto;
     }
 
     div ul li {
-        display: inline-block;
+        margin-right: 20%;
     }
 
     h3, p {
-        margin: 0 25px;
+        margin: 0 20px;
     }
 
     h3 {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     p {
         line-height: 21px;
+        font-size: v.$mobile-base-font-size;
+        font-weight: v.$base-font-weight;
     }
 
     .paragraph {
         border-bottom: 3px solid v.$base-colour;
-        margin-top: 30px;
-        padding-bottom: 30px;
+        margin-top: 20px;
+        padding-bottom: 25px;
+
+        h3 {
+            margin-bottom: 20px;
+        }
     }
 
     .grid-con {
         padding: 0;
     }
+
+    .solution {
+        border: 0;
+    }
+
+    .list {
+        border-bottom: 3px solid v.$base-colour;
+        padding: 15px 0;
+    }
+
+    .list-left {
+        margin-left: -6px;
+    }
+
 }
 
-.project-image {
+#close-button {
     background-color: v.$base-colour;
-    padding: 15px 0;
-    margin: 0 20px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    justify-self: center;
+    cursor: pointer;
+    margin-bottom: -10px;
+}
+
+.close {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: v.$body-text-colour;
+    border-radius: 15px;
+    top: 45%;
+    left: 17%;
+}
+
+.close:nth-child(1) {
+    transform: rotate(45deg) translate(0, 0);
+}
+
+.close:nth-child(2) {
+    transform: rotate(-45deg) translate(0, 0);
+}
+
+.main-image, .project-image {
+    width: auto;
+    background-color: v.$base-colour;
+    width: 350px;
+    height: auto;
+    justify-self: center;
+    padding: 10px;
+    margin: 5px;
+    overflow: hidden;
 }
 
 
-.solution {
-    margin: 20px 0;
+.images {
+    margin-top: 20px;
 }
 
-.image2, image3 {
-    grid-row: 3/4;
+.list-end {
+    margin-bottom: 20px;
 }
+
+
+@media screen and (min-width: 768px) {
+
+    #projects-details {
+
+        .title {
+            margin-bottom: 20px;
+        }
+
+        div ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            width: auto;
+        }
+        
+        div ul {
+            // padding: 5px 0;
+            margin-left: -8px;
+        }
+    
+        div ul li {
+            margin-right: 10%;
+        }
+    
+        h3, p {
+            margin: 0 20px;
+        }
+
+        .list {
+            padding: 10px 0;
+
+            h3 {
+                font-size: v.$tablet-header-font-size;
+            }
+        }
+    
+        .list-left {
+            margin-left: -6px;
+        }
+
+        .paragraph {
+            border-bottom: 0;
+            padding: 0px 20px 20px 5px;
+
+            h3, p {
+                margin: 0;
+                padding: 0;
+            }
+
+            h3 {
+                font-size: v.$tablet-header-font-size;
+            }
+        }
+
+        .issue {
+            grid-row-start: 4;
+            margin-left: 20px;
+            h3 {
+                margin-bottom: 10px;
+            }
+        }
+
+        .solution {
+            // margin-left: 20px;
+            border-top: 2px solid v.$base-colour;
+
+            h3{
+                margin: 20px 10px 10px 20px;
+            }
+
+            p {
+                margin-left: 20px;
+            }
+        }
+
+        .project-description {
+            border-bottom: 2px solid v.$base-colour;
+            padding-left: 10px;
+
+            h3 {
+                margin-top: -15px;
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+
+    .main-image {
+        width: 330px;
+        margin-left: 30px;
+    }
+
+    .project-image {
+        padding: 10px 0px;
+    }
+
+    .image-left {
+        margin-left: 30px;
+        margin-right: 10px;
+    }
+
+    .image-right {
+        margin-right: 30px;
+        margin-left: 10px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+
+
+}
+
+
+
 
 
 
