@@ -35,8 +35,6 @@ a {
     text-decoration: none;
 }
 
-//main message//
-
 .message-box {
     margin: 25px 10px;
     background-color: v.$secondary-colour;
@@ -90,11 +88,9 @@ a {
 //Video Container//
 
 #video-container {
-    border: 10px solid v.$secondary-colour;
-    margin: 100px 0;
+    border: 12px solid v.$secondary-colour;
+    margin-top: 40%;
 }
-
-
 
 
 //Projects//
@@ -131,6 +127,10 @@ a {
     cursor: pointer;
     filter: drop-shadow(2px 2px 4px rgb(184, 184, 184));
     transition: transform 0.4s ease-in;
+
+    p {
+        padding-bottom: 15px;
+    }
 }
 
 .project-container:hover {
