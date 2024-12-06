@@ -4,7 +4,6 @@
 <head>
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Tina's Portfolio</title>
-    <!--link to Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -16,7 +15,9 @@
         <div id="sticky-nav" class="grid-con">
             
             <div id="main-logo" class="col-start-1 col-end-4 m-col-start-1 m-col-end-7">
-                <img src="images/logo-final.svg" alt="logo">
+                <a href="index.html">
+                    <img src="images/logo-final.svg" alt="logo">
+                </a>
             </div>
 
             <div id="burger-icon" class="col-start-4 col-end-5">
@@ -39,32 +40,37 @@
     <section  id="hero" class="full-width-grid-con">
         <h2 class="hidden">Welcome!</h2>
         
-        <img src="images/background-400w.jpg" alt="gradient background" class="mobile-size">
-        <img src="images/background-770w.jpg" alt="gradient background" class="desktop-size">
+        <img src="images/background-mobile.jpg" alt="mobile background" class="mobile-size">
+        <img src="images/background-desktop.jpg" alt="mobile background" class="desktop-size">
 
         <div class="grid-con">
         <div id="header-message" class="col-span-full m-col-start-2 m-col-end-11 l-col-start-1 l-col-end-13">
             <div class="message-box">
-                <p>HELLO! I am TINA!</p><i class="fa-sharp fa-solid fa-check"></i>
+                <p>HELLO! I am TINA!</p>
+                <p class="tick">&#10004;</p>
             </div>
 
             <div class="message-box">
-                <p>A Front End Developer and Digital Designer</p><i class="fa-sharp fa-solid fa-check"></i>
+                <p>A Front End Developer and Digital Designer</p>
+                <p class="tick">&#10004;</p>
             </div>
 
             <div id="about-me-message" class="message-box">
+                <a href="#about-me">
                 <div id="about-img-container">
                     <img
                     sizes="(max-width: 1400px) 100vw, 1400px"
                     srcset="
-                    images/about-me-img_cm8wlz_c_scale,w_789.jpg 412w,
-                    images/about-me-img_cm8wlz_c_scale,w_1218.jpg 1218w,
+                    images/about-me-img_cm8wlz_c_scale,w_533.jpg 533w,
+                    images/about-me-img_cm8wlz_c_scale,w_950.jpg 950w,
                     images/about-me-img_cm8wlz_c_scale,w_1400.jpg 1400w"
                     src=" images/about-me-img_cm8wlz_c_scale,w_1400.jpg"
                     alt="personal image">
                 </div>
 
-                <p>Want to know more about me?</p><i class="fa-sharp fa-solid fa-check"></i>
+                <p class="link">Want to know more about me?</p>
+                <p class="tick">&#10004;</p>
+                </a>
             </div>
 
             <div id="video-container">
@@ -86,17 +92,46 @@
     </section>
 
     <section id="projects" class="grid-con">
-        <h2 class="col-span-full">Project section</h2>
+        <h2 class="col-span-full">Project</h2>
 
-        <div class="col-span-full section-line"></div>
+        <div class="col-span-full section-line-start"></div>
 
-        <div class="col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-5 project-container">
-            <div class="project-thumbnail">
-                <img src="images/burple-img-placegolder.jpg" alt="project thumbnail">
-            </div>
-            <h3>Burple</h3>
-            <p>Rebranding</p>
+        <div class="col-span-full m-col-span-6 l-col-span-4 project-container">
+            <a href="project.html">
+                <div class="project-thumbnail">
+                    <img src="images/burple-thumbnail.jpg" alt="project thumbnail">
+                </div>
+
+                <h3>Burple</h3>
+                <p>Rebranding</p>
+            </a>
         </div>
+
+
+        <div class="col-span-full m-col-span-6 l-col-span-4 project-container">
+            <a href="project.html">
+                <div class="project-thumbnail">
+                    <img src="images/burple-thumbnail.jpg" alt="project thumbnail">
+                </div>
+
+                <h3>Burple</h3>
+                <p>Rebranding</p>
+            </a>
+        </div>
+
+
+        <div class="col-span-full m-col-span-6 l-col-span-4 project-container">
+            <a href="project.html">
+                <div class="project-thumbnail">
+                    <img src="images/burple-thumbnail.jpg" alt="project thumbnail">
+                </div>
+
+                <h3>Burple</h3>
+                <p>Rebranding</p>
+            </a>
+        </div>
+
+    <div class="col-span-full section-line-end"></div>
 
     </section>
 
