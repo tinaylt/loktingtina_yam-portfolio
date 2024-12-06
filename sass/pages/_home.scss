@@ -35,14 +35,17 @@ a {
     text-decoration: none;
 }
 
+.section-line {
+    border-bottom: 2px dashed v.$secondary-colour;
+    height: 20px;
+}
+
 //Video Container//
 
 #video-container {
-    border: 20px solid v.$secondary-colour;
-    margin: 100px 20px 30px 20px;
+    border: 12px solid v.$secondary-colour;
+    margin-top: 40%;
 }
-
-
 
 
 //Projects//
@@ -66,14 +69,19 @@ a {
     background-color: v.$secondary-colour;
     border-radius: 20px;
     padding: 5px;
-    margin: 10px 10px;
+    margin: 30px 10px;
     cursor: pointer;
     filter: drop-shadow(2px 2px 4px rgb(184, 184, 184));
     transition: transform 0.4s ease-in;
+
+    p {
+        padding-bottom: 15px;
+    }
 }
 
 .project-container:hover {
-    transform: scale(1.025);
+    transform: scale(1.015);
+    background-color: v.$primary-colour;
 }
 
 .project-container p {
