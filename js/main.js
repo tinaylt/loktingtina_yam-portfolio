@@ -1,17 +1,22 @@
 (() => {
+
+    //Burger Menu//
     const burger = document.querySelector('#burger-icon');
     const mobileNav = document.querySelector('#mobile-nav');
     const lines = document.querySelectorAll('.line');
+    const sections = document.querySelectorAll('#mobile-nav ul li a');
     
-    // Function to toggle menu with animation
+    //Function//
+
+    //Burger Menu//
     function toggleMenu() {
-        const openMenu = burger.classList.toggle('active');
-        mobileNav.classList.toggle('hide', !openMenu);
-        lines.forEach(line => line.classList.toggle('active', openMenu)); // Adds/removes 'active' class
+        burger.classList.toggle('active');
+        mobileNav.classList.toggle('hide');
+        lines.forEach(line => line.classList.toggle('active'));
     }
-    
-    // Event handler for mobile menu toggle
+
+    //Event Listener//
+    //Burger Menu//
     burger.addEventListener('click', toggleMenu);
-    
 
 })();

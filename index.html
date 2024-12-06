@@ -4,8 +4,7 @@
 <head>
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Tina's Portfolio</title>
-    <!--link to Font Awesome-->
-    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
@@ -16,7 +15,9 @@
         <div id="sticky-nav" class="grid-con">
             
             <div id="main-logo" class="col-start-1 col-end-4 m-col-start-1 m-col-end-7">
-                <img src="images/logo-final.svg" alt="logo">
+                <a href="index.html">
+                    <img src="images/logo-final.svg" alt="logo">
+                </a>
             </div>
 
             <div id="burger-icon" class="col-start-4 col-end-5">
@@ -39,53 +40,37 @@
     <section  id="hero" class="full-width-grid-con">
         <h2 class="hidden">Welcome!</h2>
         
-        <img
-        sizes="(max-width: 1400px) 100vw, 1400px"
-        srcset="
-        images/gradient-bg_bqemjt_c_scale,w_200.jpg 200w,
-        images/gradient-bg_bqemjt_c_scale,w_641.jpg 641w,
-        images/gradient-bg_bqemjt_c_scale,w_807.jpg 807w,
-        images/gradient-bg_bqemjt_c_scale,w_923.jpg 923w,
-        images/gradient-bg_bqemjt_c_scale,w_1004.jpg 1004w,
-        images/gradient-bg_bqemjt_c_scale,w_1099.jpg 1099w,
-        images/gradient-bg_bqemjt_c_scale,w_1182.jpg 1182w,
-        images/gradient-bg_bqemjt_c_scale,w_1258.jpg 1258w,
-        images/gradient-bg_bqemjt_c_scale,w_1330.jpg 1330w,
-        images/gradient-bg_bqemjt_c_scale,w_1399.jpg 1399w,
-        images/gradient-bg_bqemjt_c_scale,w_1397.jpg 1397w,
-        images/gradient-bg_bqemjt_c_scale,w_1400.jpg 1400w"
-        src="images/gradient-bg_bqemjt_c_scale,w_1400.jpg"
-        alt="" id="hero-img">
+        <img src="images/background-mobile.jpg" alt="mobile background" class="mobile-size">
+        <img src="images/background-desktop.jpg" alt="mobile background" class="desktop-size">
 
         <div class="grid-con">
         <div id="header-message" class="col-span-full m-col-start-2 m-col-end-11 l-col-start-1 l-col-end-13">
             <div class="message-box">
-                <p>HELLO! I am TINA!</p><i class="fa-sharp fa-solid fa-check"></i>
+                <p>HELLO! I am TINA!</p>
+                <p class="tick">&#10004;</p>
             </div>
 
             <div class="message-box">
-                <p>A Front End Developer and Digital Designer</p><i class="fa-sharp fa-solid fa-check"></i>
+                <p>A Front End Developer and Digital Designer</p>
+                <p class="tick">&#10004;</p>
             </div>
 
             <div id="about-me-message" class="message-box">
+                <a href="#about-me">
                 <div id="about-img-container">
                     <img
                     sizes="(max-width: 1400px) 100vw, 1400px"
                     srcset="
-                    images/about-me-img_cm8wlz_c_scale,w_200.jpg 200w,
                     images/about-me-img_cm8wlz_c_scale,w_533.jpg 533w,
-                    images/about-me-img_cm8wlz_c_scale,w_789.jpg 789w,
                     images/about-me-img_cm8wlz_c_scale,w_950.jpg 950w,
-                    images/about-me-img_cm8wlz_c_scale,w_1090.jpg 1090w,
-                    images/about-me-img_cm8wlz_c_scale,w_1218.jpg 1218w,
-                    images/about-me-img_cm8wlz_c_scale,w_1331.jpg 1331w,
-                    images/about-me-img_cm8wlz_c_scale,w_1397.jpg 1397w,
                     images/about-me-img_cm8wlz_c_scale,w_1400.jpg 1400w"
                     src=" images/about-me-img_cm8wlz_c_scale,w_1400.jpg"
                     alt="personal image">
                 </div>
 
-                <p>Want to know more about me?</p><i class="fa-sharp fa-solid fa-check"></i>
+                <p class="link">Want to know more about me?</p>
+                <p class="tick">&#10004;</p>
+                </a>
             </div>
 
             <div id="video-container">
@@ -107,55 +92,46 @@
     </section>
 
     <section id="projects" class="grid-con">
-        <h2 class="col-span-full">Project section</h2>
+        <h2 class="col-span-full">Project</h2>
 
-        <div class="col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-5 project-container">
-            <h3>Burple</h3>
-            <p>Rebranding</p>
-            <div class="project-thumbnail">
-                <img src="images/burple-img-placegolder.jpg" alt="project thumbnail">
-            </div>
+        <div class="col-span-full section-line-start"></div>
+
+        <div class="col-span-full m-col-span-6 l-col-span-4 project-container">
+            <a href="project.html">
+                <div class="project-thumbnail">
+                    <img src="images/burple-thumbnail.jpg" alt="project thumbnail">
+                </div>
+
+                <h3>Burple</h3>
+                <p>Rebranding</p>
+            </a>
         </div>
 
-        <div class="col-span-full m-col-start-7 m-col-end-13 l-col-start-5 l-col-end-9   project-container">
-            <h3>Project Title</h3>
-            <p>Web Development</p>
-            <div class="project-thumbnail">
-                <img src="images/project-place-holder2.jpg" alt="project thumbnail">
-            </div>
+
+        <div class="col-span-full m-col-span-6 l-col-span-4 project-container">
+            <a href="project.html">
+                <div class="project-thumbnail">
+                    <img src="images/burple-thumbnail.jpg" alt="project thumbnail">
+                </div>
+
+                <h3>Burple</h3>
+                <p>Rebranding</p>
+            </a>
         </div>
 
-        <div class="col-span-full m-col-start-1 m-col-end-7 l-col-start-9 l-col-end-13 project-container">
-            <h3>Project Title</h3>
-            <p>Product Design</p>
-            <div class="project-thumbnail">
-                <img src="images/project-place-holder3.jpg" alt="project thumbnail">
-            </div>
+
+        <div class="col-span-full m-col-span-6 l-col-span-4 project-container">
+            <a href="project.html">
+                <div class="project-thumbnail">
+                    <img src="images/burple-thumbnail.jpg" alt="project thumbnail">
+                </div>
+
+                <h3>Burple</h3>
+                <p>Rebranding</p>
+            </a>
         </div>
 
-        <div class="col-span-full m-col-start-7 m-col-end-13 l-col-start-1 l-col-end-5 project-container">
-            <h3>Project Title</h3>
-            <p>Product Design</p>
-            <div class="project-thumbnail">
-                <img src="images/project-place-holder4.jpg" alt="project thumbnail">
-            </div>
-        </div>
-
-        <div class="col-span-full m-col-start-1 m-col-end-7 l-col-start-5 l-col-end-9 project-container">
-            <h3>Project Title</h3>
-            <p>Web Development</p>
-            <div class="project-thumbnail">
-                <img src="images/project-place-holder5.jpg" alt="project thumbnail">
-            </div>
-        </div>
-
-        <div class="col-span-full m-col-start-7 m-col-end-13 l-col-start-9 l-col-end-13 project-container">
-            <h3>Project Title</h3>
-            <p>Motion Design</p>
-            <div class="project-thumbnail">
-                <img src="images/project-place-holder6.jpg" alt="project thumbnail">
-            </div>
-        </div>
+    <div class="col-span-full section-line-end"></div>
 
     </section>
 
