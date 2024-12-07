@@ -1,0 +1,42 @@
+@use '../abstracts/variables' as v;
+
+#connect {
+    margin: 150px 50px 20px 50px;
+    // justify-items: center;
+    // align-self: center;
+
+    
+}
+
+#connect-intro {
+    justify-items: center;
+    align-self: center;
+}
+
+#contact-form {
+    margin: 40px 0;
+    justify-items: center;
+    align-self: center;
+
+    form {
+        background-color: v.$primary-colour-two;
+        width: 350px;
+        padding: 30px;
+    }
+
+    input, textarea {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid v.$body-text-colour;
+        background-color: transparent;
+    }
+
+    #send-button {
+        border: 2px solid v.$body-text-colour;
+        width: 150px;
+        height: 40px;
+        border-radius: 50px;
+        font-size: v.$mobile-base-font-size;
+    }
+}
