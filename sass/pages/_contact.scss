@@ -1,12 +1,23 @@
 @use '../abstracts/variables' as v;
 
-#connect {
-    margin: 150px 50px 20px 50px;
-    // justify-items: center;
-    // align-self: center;
 
-    
+#connect {
+    min-height: 100vh;
+    padding-top: 150px;
+    padding-bottom: 30px;
+    margin: 0 40px;
+
+    h2 {
+        padding-bottom: 20px;
+        font-size: 35px;
+    }
+
+    h2, p {
+        margin: 0 10px;
+    }
+
 }
+
 
 #connect-intro {
     justify-items: center;
@@ -14,22 +25,48 @@
 }
 
 #contact-form {
-    margin: 40px 0;
-    justify-items: center;
+    margin: 30px 0 30px 0;
+    justify-content: center;
     align-self: center;
+    display: flex;
 
     form {
         background-color: v.$primary-colour-two;
-        width: 350px;
-        padding: 30px;
+        width: 380px;
+        padding: 25px;
+        height: 480px;
+        font-weight: 600;
+        box-shadow: 7px 7px 5px rgba(23, 23, 23, 0.5);
+    }
+
+    label {
+        padding-bottom: 10px;
+
     }
 
     input, textarea {
         border-top: none;
         border-left: none;
         border-right: none;
-        border-bottom: 1px solid v.$body-text-colour;
+        border-bottom: 2px solid v.$body-text-colour;
         background-color: transparent;
+    }
+
+    input[type=text]:focus, input[type=email]:focus, textarea:focus {
+        background-color: rgba(255, 255, 255, 0.368);
+        padding: 5px;
+        font-family: v.$base-font-family;
+    }
+
+
+    input {
+        width: 350px;
+        height: 20px;
+    }
+
+    textarea {
+        width: 350px;
+        height: 200px;
     }
 
     #send-button {
@@ -38,5 +75,111 @@
         height: 40px;
         border-radius: 50px;
         font-size: v.$mobile-base-font-size;
+        cursor: pointer;
+        margin-left: 56%;
+        font-weight: 600;
+    }
+
+    #send-button:hover {
+        background-color: v.$primary-colour;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    #connect {
+        margin: 0 60px;
+    }
+    
+
+    #contact-form {
+        margin: 30px 0 30px 0;
+    
+        form {
+            width: 600px;
+            height: 480px;
+        }
+    
+        input[type=text]:focus, input[type=email]:focus, textarea:focus {
+            font-size: 15px;
+            margin: 5px;
+        }
+    
+        input {
+            width: 600px;
+            height: 20px;
+        }
+    
+        textarea {
+            width: 600px;
+            height: 200px;
+        }
+    
+        #send-button {
+            width: 200px;
+            margin-left: 67%;
+        }
+    
+
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    #connect {
+        padding-top: 170px;
+        margin: 0 15%;
+        
+        h2 {
+            padding-bottom: 30px;
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            padding-bottom: 20px;
+        }
+
+        h2, p {
+            margin: 0 30px;
+        }
+    }
+
+
+    #contact-form {
+        margin: 30px 0 30px 0;
+
+        form {
+            width: 860px;
+            height: 470px;
+            padding: 40px;
+        }
+    
+        input[type=text]:focus, input[type=email]:focus, textarea:focus {
+            font-size: 15px;
+            margin: 5px;
+            font-size: 20px;
+        }
+    
+        input {
+            width: 840px;
+            height: 20px;
+            font-size: 17px;
+        }
+    
+        textarea {
+            width: 840px;
+            height: 200px;
+            font-size: 17px;
+        }
+    
+        #send-button {
+            width: 230px;
+            height: 40px;
+            margin-left: 72%;
+        }
+    
+
     }
 }
