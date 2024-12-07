@@ -7,18 +7,21 @@ img, embed, object, video, picture {
     max-width: 100%; 
 }
 
-body, p, h1, h2, h3, h4, h5 {
+p, h1, h2, h3, h4, h5 {
     margin: 0px; 
     padding: 0px;
 }
 
 body {
    overflow: auto;
+   margin: 0px; 
+   padding: 0px;
 }
 
 html {
     font-family: v.$base-font-family;
     box-sizing: border-box; 
+    overflow-x: hidden;
 }
 
 h2, h3, h4, h5, h6, p {
@@ -89,7 +92,7 @@ a {
 
 #video-container {
     border: 12px solid v.$secondary-colour;
-    margin-top: 40%;
+    margin: 20% 5%;
 }
 
 
@@ -100,7 +103,7 @@ a {
         padding-bottom: 0px;
         font-size: 35px;
         font-weight: 400;
-        margin-left: 20px;
+        margin-left: 5%;
     }
 }
 
@@ -116,21 +119,17 @@ a {
 
 #projects .project-thumbnail {
     text-align: center;
-    margin: 25px 5px 15px 5px;
+    margin: 25px 10px 10px 10px;
 }
 
 .project-container {
     background-color: v.$secondary-colour;
     border-radius: 20px;
-    margin: 10px 30px 30px 30px;
+    margin: 10px 8% 30px 8%;
     padding: 0 0 25px 0;
     cursor: pointer;
     filter: drop-shadow(2px 2px 4px rgb(184, 184, 184));
     transition: transform 0.4s ease-in;
-
-    p {
-        padding-bottom: 15px;
-    }
 }
 
 .project-container:hover {
@@ -139,11 +138,11 @@ a {
 }
 
 .project-container p {
-    margin-left: 35px;
+    margin-left: 30px;
 }
 
 .project-container h3 {
-    margin-left: 35px;
+    margin-left: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -152,7 +151,6 @@ a {
 
     .message-box {
         padding: 15px;
-        border-radius: v.$tablet-border;
 
         p {
             font-size: v.$tablet-header-font-size;
@@ -190,7 +188,7 @@ a {
 
     #video-container {
         border: 15px solid v.$secondary-colour;
-        margin: 100px auto;
+        margin: 20% 10%;
     }
     
     //Project//
@@ -210,11 +208,11 @@ a {
     }
     
     #projects .project-thumbnail {
-        padding: 0 25px;
+        padding: 0 15px;
     }
     
     .project-container {
-        margin: 25px 5px;
+        margin: 25px 20px;
         padding: 0 0 25px 0;
     }
     
@@ -237,14 +235,13 @@ a {
 
     .message-box {
         padding: 15px;
-        border-radius: v.$tablet-border;
         width: 600px;
     }
     
     #header-message {
         grid-row-start: 1;
         z-index: 4;
-        margin: 180px 20px 5px 60px;
+        margin: 200px 20px 5px 60px;
     }
 
     #projects {
@@ -253,18 +250,17 @@ a {
         }
     }
 
+    .project-container {
+        margin: 25px 5px;
+    }
+
     .section-line-start {
-        margin: 40px -3%;
+        margin: 40px -8%;
     }
     
     .section-line-end {
-        margin: 40px -3% 20px -3%;
+        margin: 40px -8% 20px -8%;
     }
     
-    
-    #video-container {
-        border: 25px solid v.$secondary-colour;
-        margin: 150px auto;
-    }
 
 }

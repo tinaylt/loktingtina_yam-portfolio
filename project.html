@@ -4,8 +4,7 @@
 <head>
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Tina's Portfolio</title>
-    <!--link to Font Awesome-->
-    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
@@ -21,25 +20,27 @@
                 <span class="close"></span>
             </div>
 
-            <h3 class="col-span-full title">Project Title</h3>
+            <h3 class="col-span-full project-title">Burple</h3>
             
-            <div class="main-image col-span-full m-col-start-1 m-col-end-7">
-                <img src="images/group-100.jpg" alt="burple main image">
+            <div class="col-span-full project-thumbnail">
+                <img src="images/burple-thumbnail.jpg" alt="burple main image">
             </div>
 
-        <div class="col-span-full m-col-start-7 m-col-end-13">
-            <div class="paragraph project-description">
+        <div class="col-span-full">
+            <div class="project-description">
                 <h3>Project Details:</h3>
-                <p>This assignment for the second semester of the Interactive Media Design program involved rebranding the discontinued kids' beverage brand, Burple. Our task was to develop a new logo, product packaging, poster, and promotional video. Since the brand targets children, we focused on creating a design that's vibrant, colorful, and fun. To capture the playful and energetic spirit of a kid's drink, we infused dynamic, lively elements into both the logo and packaging.</p>
+                <p>This assignment for the second semester of the Interactive Media Design program involved rebranding the discontinued kids' beverage brand, Burple. Our task was to develop a new logo, product packaging, poster, and promotional video. Since the brand targets children, we focused on creating a design that’s vibrant, colorful, and fun. To capture the playful and energetic spirit of a kid’s drink, we infused dynamic, lively elements into both the logo and packaging.</p>
             </div>
 
-            <div class="list">
+            <div class="project-line"></div>
+
+            <div class="detail-list">
                 <ul>
-                    <li>
+                    <li class="categories">
                     <h3>Service:</h3>
                     </li>
 
-                    <li class="list-left">
+                    <li class="list">
                     <p>UX/UI Design</p>
                     <p>Web Development</p>
                     <p>Logo Design</p>
@@ -48,55 +49,89 @@
                 </ul>
             </div>
 
-            <div class="list">
+            <div class="project-line"></div>
+
+            <div class="detail-list">
                 <ul>
-                    <li><h3>Status:</h3></li>
+                    <li class="categories">
+                        <h3>Year:</h3>
+                    </li>
                     
-                    <li>
-                    <p>Completed</p>
+                    <li class="list">
+                    <p>2024</p>
                     </li>
                 </ul>
             </div>
 
-            <div class="list">
+            <div class="project-line"></div>
+
+            <div class="detail-list">
                 <ul>
-                    <li>
+                    <li class="categories">
                     <h3>Credit:</h3>
                     </li>
                     
-                    <li>
-                    <p>Roy Sit</p>
+                    <li class="list">
+                    <h4>Roy Sit</h4>
+                    <p>Package Design</p>
+                    <p>Web Design</p>
+                    <p>3D Model</p>
+                    <br>
+                    <h4>Tina Yam:</h4>
+                    <p>Logo Design</p>
+                    <p>Web Design</p>
+                    <p>3D Model</p>
+                    <p>Front-end Development</p>
                     </li>
                 </ul>
             </div>
+
+            <div class="project-line"></div>
         </div>
 
-            <div class="project-image image-left col-span-full m-col-start-1 m-col-end-7">
-                <img src="images/burple-logo.jpg" alt="burple logo">
+        <div class="col-span-full project-image">
+            <div>
+                <img src="images/burple-image2.jpg" alt="burple website mobile size">
             </div>
 
 
-            <div class="project-image image-right col-span-full m-col-start-7 m-col-end-13">
-                <img src="images/burple-label.png" alt="burple label">
+            <div>
+                <img src="images/burple-image3.jpg" alt="burple website desktop size">
             </div>
 
-            <div class="issue paragraph col-span-full">
+            <div>
+                <img src="images/burple-image4.jpg" alt="burple logo">
+            </div>
+        </div>
+
+
+            <div class="col-span-full">
                 <h3>Issue:</h3>
-                <p>Through our research, we discovered that one of the standout features of the original Burple brand was its expandable plastic bottle. However, we couldn't replicate the exact design for our rebranding. After brainstorming, we decided on a round-shaped bottle, which is more practical for kids to store and reuse as a water bottle. The challenge we faced was crafting the perfect shape in Cinema 4D, as the unique bottle design required precise modeling to achieve the desired look.</p>
+                <p><span>1</span>The logo it a bit flat and not playful feel using solid colour. And the original logo colour is orange, but I didn't want to reuse the colour scheme as original, it is not impactful for rebranding.</p>
+
+                <p><span>2</span>The package of original brand had a unique design for kids, fun and also iconic. It is not a good way replicate the exact design for rebranding.</p>
+
+                <p><span>3</span>Our team created more than one package labels and also want user to review and download it. We need a functional photo gallery.</p>
             </div>
 
             <div class="solution paragraph col-span-full">
                 <h3>Solution:</h3>
-                <p>After several attempts and referencing a few online resources, we created a path for the bottle and integrated it into the 3D model. Once the shape of the bottle was finalized, we focused on adding a realistic plastic texture to the label and simulating liquid/juice inside the bottle for added realism. After watching tutorials, we enhanced the scene by incorporating a background and adjusting the lighting, achieving a satisfying and polished look. Additionally, we added a small liquid path to further enhance the realism.</p>
+                <p><span>1</span>To add some playful vibes in the logo, first, I used a light pink-purple as the main colour. Then, adjust the 'l' as a slider and letter 'e' sliding down. It is also a CSS animation when user hover the logo.</p>
+
+                <p><span>2</span>I found that some of the user experience online reviewed that although the bottle was unique, but it's hard to carry out and split out easily. So we decided to make a bottle suitable for kids to carry and enhance to screw bottle cap.</p>
+
+                <p><span>3</span>To showcase all labels, I made a functional photo gallery using JavaScript. I set the div to specific width and height, images had been inserted and display into inline position. After that, added button for click and slide function. </p>
+            </div>
+
+            <div class="col-span-full">
+                <img src="images/burple-image5.jpg" alt="download section">
+            </div>
+
+
+            <div class="col-span-full">
+                <img src="images/burple-image6.jpg" alt="burple bottles">
             </div>
             
-                <div class="project-image image-left col-span-full m-col-start-1 m-col-end-7">
-                    <img src="images/burple-img4.jpg" alt="burple logo">
-                </div>
-
-                <div class="project-image image-right col-span-full m-col-start-7 m-col-end-13">
-                    <img src="images/burple-img4.jpg" alt="burple logo">
-                </div>
 
         </div>
 
