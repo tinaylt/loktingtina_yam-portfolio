@@ -4,7 +4,6 @@
     const burger = document.querySelector('#burger-icon');
     const mobileNav = document.querySelector('#mobile-nav');
     const lines = document.querySelectorAll('.line');
-    const sections = document.querySelectorAll('#mobile-nav ul li a');
     
     //Function//
 
