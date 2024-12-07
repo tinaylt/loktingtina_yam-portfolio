@@ -3,20 +3,19 @@
 
 footer {
     background-color: v.$primary-colour;
+
 }
 
 #footer {
     padding: 20px 10px;
-    margin-top: 20px;
+    margin-top: auto;
+    // background-color: v.$primary-colour;
 }
 
-#footer .mark {
-    text-align: right;
+
+@media screen and (min-width: 768px) {
+
 }
-
-// @media screen and (min-width: 768px) {
-
-// }
 
 @media screen and (min-width: 1200px) {
     
