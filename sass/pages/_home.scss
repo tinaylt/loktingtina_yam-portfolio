@@ -232,18 +232,20 @@ button {
 
 #projects .project-thumbnail {
     text-align: center;
-    margin: 25px 10px 10px 10px;
+    margin: 25px 25px 10px 25px;
 }
 
 .project-container {
     background-color: v.$secondary-colour;
     border-radius: 20px;
-    margin: 10px 8% 30px 8%;
+    margin: 10px 30px 30px 30px;
     padding: 0 0 25px 0;
     cursor: pointer;
     filter: drop-shadow(2px 2px 4px rgb(184, 184, 184));
     transition: transform 0.4s ease-in;
+    overflow: hidden;
 }
+
 
 .project-container:hover {
     transform: scale(1.015);
