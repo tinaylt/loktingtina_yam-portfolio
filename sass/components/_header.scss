@@ -75,6 +75,11 @@ header {
     padding: 30px 0;
 }
 
+#mobile-nav ul li a:hover {
+    background-color: v.$primary-colour;
+    padding: 15px 40%;
+}
+
 #mobile-nav ul li a {
     color: v.$body-text-colour;
     font-size: v.$mobile-header-size;
@@ -177,6 +182,16 @@ header {
         margin-left: 0;
         border-bottom: 0;
         padding: 0 0;
+    }
+
+    #mobile-nav ul li a:hover {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    #mobile-nav ul li:hover {
+        transform: scale(1.05);
+        padding: 0;
     }
 
     #mobile-nav ul li p {
