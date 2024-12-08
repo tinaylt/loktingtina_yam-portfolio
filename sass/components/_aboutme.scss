@@ -1,0 +1,119 @@
+@use '../abstracts/variables' as v;
+
+#lightbox {
+    position: absolute;
+    top: 0;
+    z-index: 1500;
+    background-color: rgba(0, 0, 0, 0.635);
+    padding: 10px;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.lightbox {
+    display: none;
+}
+
+
+#about-me {
+    background-color: white;
+    padding: 50px 20px;
+}
+
+#aboutme-close-button {
+    background-color: v.$secondary-colour;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    justify-self: center;
+    cursor: pointer;
+    margin-top: 0;
+}
+
+#aboutme-close-button:hover {
+    .aboutme-close:nth-child(1) {
+        background-color: v.$primary-colour;
+    }
+
+    .aboutme-close:nth-child(2) {
+        background-color: v.$primary-colour-two;
+    }
+}
+
+
+
+.aboutme-close {
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: v.$body-text-colour;
+    border-radius: 15px;
+    top: 45%;
+    left: 17%;
+}
+
+
+.aboutme-close:nth-child(1) {
+    transform: rotate(45deg) translate(0, 0);
+}
+
+.aboutme-close:nth-child(2) {
+    transform: rotate(-45deg) translate(0, 0);
+}
+
+.background-left {
+    background-color: v.$primary-colour-two;
+    width: 300px;
+    height: 150px;
+    margin-left: 20px;
+}
+
+.background-right {
+    background-color: v.$primary-colour;
+    width: 300px;
+    height: 150px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+#photo-section {
+    position: relative;
+    padding-top: 30px;
+
+}
+
+.my-photo {
+    position: absolute;
+    display: flex;
+    top: 20%;
+    left: 0;
+    overflow: hidden;
+
+    img {
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+.aboutme-intro {
+    margin: 40px 0;
+}
+
+#design-process {
+    margin: 0;
+    padding: 0;
+
+    h3 {
+        padding-bottom: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+

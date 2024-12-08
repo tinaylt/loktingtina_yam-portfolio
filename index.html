@@ -28,7 +28,7 @@
             <div class="col-span-full m-col-start-7 m-col-end-13">
                 <nav id="mobile-nav" class="hide">
                     <ul>
-                        <li><p><a href="#sticky-nav">Home</a></p></li>
+                        <li><p><a href="index.html">Home</a></p></li>
                         <li><p><a href="#projects">Projects</a></p></li>
                         <li><p><a href="contact.html">Contact</a></p></li>
                     </ul>
@@ -56,7 +56,6 @@
             </div>
 
             <div id="about-me-message" class="message-box">
-                <a href="#about-me">
                 <div id="about-img-container">
                     <img
                     sizes="(max-width: 1400px) 100vw, 1400px"
@@ -70,7 +69,6 @@
 
                 <p class="link">Want to know more about me?</p>
                 <p class="tick">&#10004;</p>
-                </a>
             </div>
 
         </div>
@@ -80,7 +78,7 @@
                 <source src="video/video-placeholder.mp4" type="video/mp4">
             </video>
 
-            <div class="video-controls" id="video-controls">
+            <div class="video-controls hide" id="video-controls">
                 <button id="play-button"><i class="fa-solid fa-play"></i></button>
                 <button id="pause-button"><i class="fa-solid fa-pause"></i></button>
                 <button id="stop-button"><i class="fa-solid fa-stop"></i></button>
@@ -128,9 +126,56 @@
         </div>
 
     </footer>
+
+    <section id="lightbox" class="lightbox">
+        <h2 class="hidden">About Me</h2>
+
+        <div id="about-me" class="grid-con">
+
+            <div id="aboutme-close-button" class="col-start-4 col-end-5 m-col-start-12 m-col-end-13">
+                <span class="aboutme-close"></span>
+                <span class="aboutme-close"></span>
+            </div>
+
+            <div id="photo-section" class="col-span-full">
+                <div class="background-left"></div>
+                <div class="background-right"></div>
+                <div class="my-photo">
+                    <img src="images/about-me.jpg" alt="personal photo">
+                </div>
+            </div>
+
+                <div class="col-span-full aboutme-intro">
+                    <p>I'm Tina, originally from Hong Kong and a proud graduate of Fanshawe College's Interactive Media Program. I am passionated in design and coding, which allows me to blend creativity with technology in my work. In my spare time, I love traveling and exploring new things, always curious and eager to learn.</p>
+                </div>
+
+                <div id="design-process" class="col-span-full">
+                    <h3 class="col-span-full">Design Process</h3>
+
+                    <img src="images/design-process-mobile.jpg" alt="design process" class="mobile-size">
+                    <img src="images/design-process.jpg" alt="design process" class="desktop-size">
+                </div>
+
+                <div class="col-span-full">
+                    <h3>Frameworks I worked: </h3>
+                    <p>HTML5, CSS, JavsScript, SASS, SQL, Php</p>
+                </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="js/main.js"></script>
 </body>
-
-
 
 </html>
