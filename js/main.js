@@ -140,8 +140,6 @@
         lines.forEach(line => line.classList.toggle('active'));
     }
 
-    //Menu Animation//
-
 
     //About Me function//
 
@@ -203,7 +201,6 @@
     //Event Listener//
     //Burger Menu//
     burger.addEventListener('click', toggleMenu);
-
 
     //About Me//
     aboutMeMessage.addEventListener('click', openLightBox);

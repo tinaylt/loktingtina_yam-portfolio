@@ -19,7 +19,7 @@
     background-color: v.$body-text-colour;
     border-radius: 15px;
     top: 45%;
-    left: 17%;
+    left: 15%;
 }
 
 .close:nth-child(1) {
@@ -28,6 +28,20 @@
 
 .close:nth-child(2) {
     transform: rotate(-45deg) translate(0, 0);
+}
+
+#close-button:hover {
+
+
+    transition: 0.5 ease-in-out;
+    .close:nth-child(1) {
+        display: none;
+        background-color: v.$primary-colour;
+    }
+
+    .close:nth-child(2) {
+        transform: rotate(180deg);
+    }
 }
 
 #projects-details {
@@ -95,12 +109,12 @@
 }
 
 .num {
-    border: 2px solid v.$body-text-colour;
     margin-right: 5px;
     border-radius: 90px;
-    padding:0 4px;
-    font-size: 12px;
-    font-weight: 500;
+    padding:2px 6px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: v.$primary-colour;
 }
 
 #issue {
