@@ -4,9 +4,8 @@
     position: absolute;
     top: 0;
     z-index: 1500;
-    background-color: rgba(0, 0, 0, 0.635);
-    padding: 10px;
-    height: 100%;
+    background-color: rgba(0, 0, 0, 0.79);
+    height: max-content;
     overflow-x: hidden;
 }
 
@@ -18,6 +17,7 @@
 #about-me {
     background-color: white;
     padding: 50px 20px;
+    margin: 10px;
 }
 
 #aboutme-close-button {
@@ -31,16 +31,19 @@
 }
 
 #aboutme-close-button:hover {
+
+
+    transition: 0.5 ease-in-out;
     .aboutme-close:nth-child(1) {
+        display: none;
         background-color: v.$primary-colour;
     }
 
     .aboutme-close:nth-child(2) {
         background-color: v.$primary-colour-two;
+        transform: rotate(180deg);
     }
 }
-
-
 
 .aboutme-close {
     position: absolute;
@@ -63,36 +66,37 @@
 
 .background-left {
     background-color: v.$primary-colour-two;
-    width: 300px;
-    height: 150px;
+    width: 250px;
+    height: 100px;
     margin-left: 20px;
 }
 
 .background-right {
     background-color: v.$primary-colour;
-    width: 300px;
-    height: 150px;
+    width: 250px;
+    height: 100px;
     float: right;
-    margin-top: 15px;
     margin-right: 20px;
 }
 
 #photo-section {
     position: relative;
-    padding-top: 30px;
+    margin: 20px 30px;
 
 }
 
 .my-photo {
     position: absolute;
     display: flex;
-    top: 20%;
-    left: 0;
+    top: 1%;
+    left: 5%;
     overflow: hidden;
+    width: 90%;
 
     img {
         height: auto;
         overflow: hidden;
+        margin: 10px;
     }
 }
 
@@ -109,6 +113,115 @@
     }
 }
 
+
+@media screen and (min-width: 768px) {
+
+    #lightbox {
+        position: absolute;
+        top: 0;
+        z-index: 1500;
+        background-color: rgba(0, 0, 0, 0.635);
+        height: 100%;
+        overflow-x: hidden;
+    }
+    
+    .lightbox {
+        display: none;
+    }
+    
+
+    #about-me {
+        padding: 50px 60px;
+        margin: 20px;
+    }
+
+    #aboutme-close-button {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .aboutme-close {
+        width: 30px;
+        height: 4px;
+        left: 15%;
+    }
+
+    
+    #photo-section {
+        margin: 30px 50px;
+    }
+
+    .background-left {
+        width: 400px;
+        height: 150px;
+
+    }
+    
+    .background-right {
+        width: 400px;
+        height: 150px;
+
+    }
+    
+    
+    .my-photo {
+        position: absolute;
+        display: flex;
+        top: 8%;
+        left: 5%;
+        overflow: hidden;
+        width: 90%;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    #about-me {
+        padding: 50px 60px;
+        margin: 50px;
+    }
+
+    #aboutme-close-button {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .aboutme-close {
+        width: 30px;
+        height: 4px;
+        left: 15%;
+    }
+
+    #photo-section {
+        margin: 30px 80px;
+    }
+
+    .my-photo {
+        position: absolute;
+        display: flex;
+        top: 5%;
+        left: 10%;
+        width: 80%;
+    }
+
+    .background-left {
+        width: 600px;
+        height: 250px;
+
+    }
+    
+    .background-right {
+        width: 600px;
+        height: 250px;
+
+    }
+
+
+}
 
 
 
