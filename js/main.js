@@ -131,6 +131,7 @@
     const aboutMeSection = document.querySelector('.lightbox');    
     const aboutMeClose = document.querySelector('#aboutme-close-button');
     const aboutMeMessage = document.querySelector('#about-me-message');
+    const greyScale = document.querySelector('body');
     //Function//
 
     //Burger Menu//
@@ -162,6 +163,8 @@
             duration: 1,
             delay: 2
         })
+
+        greyScale.classList.remove('greyscale');
     }
 
     function closeLightBox() {
