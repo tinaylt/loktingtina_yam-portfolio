@@ -73,7 +73,8 @@
 
     <footer>
         <div id="footer" class="grid-con">
-            <div id="copyright" class="col-start-1 col-end-3 m-col-start-2 m-col-end-8">
+
+            <div id="copyright" class="col-start-1 col-end-3 m-col-start-1 m-col-end-8">
                 <p>	&#169; 2024</p>
             </div>
 
@@ -81,6 +82,7 @@
                 <p>Designed by Tina Yam</p>
             </div>
         </div>
+
     </footer>
 
 </body>
