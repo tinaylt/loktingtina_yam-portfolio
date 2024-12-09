@@ -14,12 +14,12 @@ $lname = trim($lname);
 $email = trim($email);
 $msg = trim($msg);
 
-if(empty($fname)) {
-    $errors['first_name'] = 'Please fill in your first name';
-}
-
 if(empty($lname)) {
     $errors['last_name'] = 'Please fill in your last name';
+}
+
+if(empty($fname)) {
+    $errors['first_name'] = 'Please fill in your first name';
 }
 
 if(empty($msg)) {
@@ -34,9 +34,10 @@ if(empty($email)) {
 
 if(empty($errors)) {
 
-    $query = "INSERT INTO contacts (id, fname, lname, email, message) VALUES (NULL, '.$fname.','.$lname.','.$email.','.$msg.')";
+    $query = "INSERT INTO contacts (fname, lname, email, message) VALUES ('.$fname.','.$lname.','.$email.','.$msg.')";
 
     if(mysqli_query($connect, $query)) {
+        
         $to = 'l_yam203842@fanshaweonline.ca';
         $subject = 'You got a message from your portfolio site!';
 
@@ -48,7 +49,7 @@ if(empty($errors)) {
 
         header('Location: contact.php');
 
-    }else {
+    }else {        
         for($i=0; $i < count($errors); $i++) {
             echo $errors[$i].'<br>';
     }

@@ -26,7 +26,7 @@ $results = mysqli_query($connect, $query);
     <script defer src="js/main.js"></script>
 </head>
 
-<body>
+<body class="greyscale">
     <header>
         <h2 class="hidden">Tina's Portfolio</h2>
         <div id="sticky-nav" class="grid-con">

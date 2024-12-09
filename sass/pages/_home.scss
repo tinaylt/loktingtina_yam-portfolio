@@ -41,6 +41,11 @@ a {
     text-decoration: none;
 }
 
+.greyscale {
+    filter: grayscale(1);
+    transition: .3 ease-in-out;
+}
+
 .message-box {
     margin: 25px 10px;
     background-color: v.$secondary-colour;

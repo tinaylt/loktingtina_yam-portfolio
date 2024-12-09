@@ -51,7 +51,7 @@
         </div>
 
         <div id="contact-form">
-            <form method="post" action="email.php">
+            <form method="post" action="sendmail.php">
                 <label for="first_name">First Name:</label><br>
                 <input type="text" name="first_name" id="first_name">
                 <br><br>
@@ -59,12 +59,12 @@
                 <input type="text" name="last_name" id="last_name">
                 <br><br>
                 <label for="email">Email: </label><br>
-                <input type="email" name="email" id="email">
+                <input type="text" name="email" id="email">
                 <br><br>
                 <label for="message">Message:</label><br>
                 <textarea name="message" id="message"></textarea>
                 <br><br>
-                <input type="submit" value="Submit" id="send-button">
+                <input type="submit" value="send" id="send-button">
             </form>
             
         </div>
