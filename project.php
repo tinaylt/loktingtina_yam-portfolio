@@ -72,16 +72,28 @@
         </div>
             <div id="issue" class="col-span-full">
                 <h3>Issue:</h3>
+<<<<<<< Updated upstream
                 <p><span class="num">1</span>'.$row['issue1'].'</p>
                 <p><span class="num">2</span>'.$row['issue2'].'</p>
                 <p><span class="num">3</span>'.$row['issue3'].'</p>
+=======
+                <p><span class="num">1</span><br>'.$row['issue1'].'</p>
+                <p><span class="num">2</span><br>'.$row['issue2'].'</p>
+                <p><span class="num">3</span><br>'.$row['issue3'].'</p>
+>>>>>>> Stashed changes
             </div>
             <div class="col-span-full project-line"></div>
             <div id="solution" class="col-span-full">
                 <h3>Solution:</h3>
+<<<<<<< Updated upstream
                 <p><span class="num">1</span>'.$row['solution1'].'</p>
                 <p><span class="num">2</span>'.$row['solution2'].'</p>
                 <p><span class="num">3</span>'.$row['solution3'].'</p>
+=======
+                <p><span class="num">1</span><br>'.$row['solution1'].'</p>
+                <p><span class="num">2</span><br>'.$row['solution2'].'</p>
+                <p><span class="num">3</span><br>'.$row['solution3'].'</p>
+>>>>>>> Stashed changes
             </div>
             <div id="project-video" class="col-span-full">
                 <img src="'.$image_array[3].'" alt="image6">
