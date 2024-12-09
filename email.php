@@ -5,28 +5,13 @@ require_once('includes/connect.php');
 $fname = $_POST['first_name'];
 $lname = $_POST['last_name'];
 $email = $_POST['email'];
-<<<<<<< Updated upstream
-$message = $_POST['message'];
-=======
 $msg = $_POST['message'];
 
 $errors = [];
->>>>>>> Stashed changes
-
 
 $fname = trim($fname);
 $lname = trim($lname);
 $email = trim($email);
-<<<<<<< Updated upstream
-$message = trim($message);
-
-$query = "INSERT INTO contacts (id, fname, lname, email, message) VALUES (NULL, '".$fname."','".$lname."','".$email."','".$message."')";
-
-mysqli_query($connect, $query);
-
-header('Location: contact.php');
-
-=======
 $msg = trim($msg);
 
 if(empty($fname)) {
@@ -70,5 +55,4 @@ if(empty($errors)) {
 }
 
 }
->>>>>>> Stashed changes
 ?>
