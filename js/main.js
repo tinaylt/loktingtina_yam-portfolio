@@ -131,6 +131,7 @@
     const aboutMeSection = document.querySelector('.lightbox');    
     const aboutMeClose = document.querySelector('#aboutme-close-button');
     const aboutMeMessage = document.querySelector('#about-me-message');
+    const greyScale = document.querySelector('body');
     //Function//
 
     //Burger Menu//
@@ -139,8 +140,6 @@
         mobileNav.classList.toggle('hide');
         lines.forEach(line => line.classList.toggle('active'));
     }
-
-    //Menu Animation//
 
 
     //About Me function//
@@ -164,6 +163,8 @@
             duration: 1,
             delay: 2
         })
+
+        greyScale.classList.remove('greyscale');
     }
 
     function closeLightBox() {
@@ -203,7 +204,6 @@
     //Event Listener//
     //Burger Menu//
     burger.addEventListener('click', toggleMenu);
-
 
     //About Me//
     aboutMeMessage.addEventListener('click', openLightBox);
