@@ -13,20 +13,20 @@
 
     gsap.from('#box1', {
         autoAlpha: 0,
-        duration: 5,
+        duration: 2,
         delay: 1
     });
 
     gsap.to('.hello', {
         text: 'HELLO! I am TINA!',
-        duration: 2,
+        duration: .5,
         delay: 2
     });
 
     gsap.from('#tick1', {
         autoAlpha: 0,
-        duration: 1,
-        delay: 4,
+        duration: 0.5,
+        delay: 3,
         onComplete: readMessage
     });
 
@@ -36,20 +36,20 @@
 
     gsap.from('#box2', {
         autoAlpha: 0,
-        duration: 5,
-        delay: 5
+        duration: 2,
+        delay: 3
     });
 
     gsap.to('.position', {
         text: 'A Front End Developer and Digital Designer',
-        duration: 3,
-        delay: 6
+        duration: 2,
+        delay: 3.5
     });
 
     gsap.from('#tick2', {
         autoAlpha: 0,
         duration: 1,
-        delay: 9,
+        delay: 5.5,
         onComplete: readMessageTwo
     });
 
@@ -59,20 +59,20 @@
 
     gsap.from('#about-me-message', {
         autoAlpha: 0,
-        duration: 3,
-        delay: 10
+        duration: 2,
+        delay: 6.5
     });
 
     gsap.to('.link', {
         text: 'Want to know more about me?',
-        duration: 3,
-        delay: 12
+        duration: 1,
+        delay: 7
     });
 
     gsap.from('#tick3', {
         autoAlpha: 0,
         duration: 1,
-        delay: 15,
+        delay: 8,
         onComplete: readMessageThree
     });
 
@@ -131,7 +131,7 @@
     const aboutMeSection = document.querySelector('.lightbox');    
     const aboutMeClose = document.querySelector('#aboutme-close-button');
     const aboutMeMessage = document.querySelector('#about-me-message');
-    const greyScale = document.querySelector('body');
+    const aboutMePhoto = document.querySelector('#photo-section');
     //Function//
 
     //Burger Menu//
@@ -162,13 +162,15 @@
             autoAlpha: 0,
             duration: 1,
             delay: 2
-        })
-
-        greyScale.classList.remove('greyscale');
+        });
     }
 
     function closeLightBox() {
         aboutMeSection.classList.add('lightbox');
+    }
+
+    function changeColour() {
+        aboutMeSection.classList.remove('greyscale');
     }
 
 
@@ -208,6 +210,8 @@
     //About Me//
     aboutMeMessage.addEventListener('click', openLightBox);
     aboutMeClose.addEventListener('click', closeLightBox);
+    aboutMePhoto.addEventListener('click', changeColour);
+
 
     //Video Panel//
     playButton.addEventListener('click', playVideo);
