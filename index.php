@@ -26,7 +26,7 @@ $results = mysqli_query($connect, $query);
     <script defer src="js/main.js"></script>
 </head>
 
-<body class="greyscale">
+<body>
     <header>
         <h2 class="hidden">Tina's Portfolio</h2>
         <div id="sticky-nav" class="grid-con">
@@ -151,7 +151,7 @@ $results = mysqli_query($connect, $query);
 
     </footer>
 
-    <section id="lightbox" class="lightbox">
+    <section id="lightbox" class="lightbox greyscale size">
         <h2 class="hidden">About Me</h2>
 
         <div id="about-me" class="grid-con">
