@@ -1,21 +1,22 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
 
 
 #connect {
-    min-height: 100vh;
-    padding-top: 150px;
+    // min-height: 100vh;
+    padding-top: 50px;
     padding-bottom: 30px;
-    margin: 0 40px;
+    margin: 0 30px;
 
     h2 {
         padding-bottom: 20px;
-        font-size: 35px;
+        font-size: v.$mobile-projectpage-header;
     }
 
     h2, p {
         margin: 0 10px;
+        line-height: 23px;
     }
-
 }
 
 
@@ -29,60 +30,73 @@
     justify-content: center;
     align-self: center;
     display: flex;
+    @include m.mobile-box;
+    border: 2px solid v.$primary-colour;
+    
 
     form {
-        background-color: v.$primary-colour-two;
-        width: 380px;
+        width: 100%;
         padding: 25px;
-        height: 480px;
+        height: 550px;
         font-weight: 600;
-        box-shadow: 7px 7px 5px rgba(23, 23, 23, 0.5);
     }
 
     label {
         padding-bottom: 10px;
-
+        color: v.$primary-colour;
     }
 
     input, textarea {
+        margin: 10px 0;
         border-top: none;
         border-left: none;
         border-right: none;
-        border-bottom: 2px solid v.$body-text-colour;
         background-color: transparent;
+        border-bottom: 2px solid v.$primary-colour;;
     }
 
     input[type=text]:focus, input[type=email]:focus, textarea:focus {
-        background-color: rgba(255, 255, 255, 0.368);
+        background-color: v.$secondary-colour-two;
         padding: 5px;
+        color: v.$bg-white;
+        font-size: 20px;
         font-family: v.$base-font-family;
+        line-height: 25px;
     }
 
 
     input {
-        width: 350px;
+        width: 100%;
         height: 20px;
+        font-size: 20px;
+        color: v.$primary-colour;
     }
 
+    
     textarea {
-        width: 350px;
+        width: 100%;
         height: 200px;
+        font-size: 15px;
+        color: v.$primary-colour;
     }
 
     #send-button {
-        border: 2px solid v.$body-text-colour;
         width: 150px;
-        height: 40px;
+        height: 35px;
         border-radius: 50px;
-        font-size: v.$mobile-base-font-size;
         cursor: pointer;
-        margin-left: 56%;
-        font-weight: 600;
+        float: right;
+        box-shadow: none;
+        background-color: v.$primary-colour;
+        color: v.$bg-white;
+        font-size: 18px;
     }
 
     #send-button:hover {
-        background-color: v.$primary-colour;
+        box-shadow: 3px 3px v.$secondary-colour-two;
+        border: 1px solid v.$bg-white;
     }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -90,37 +104,46 @@
     #connect {
         margin: 0 60px;
     }
-    
 
+    #connect h2 {
+        font-size: v.$desktop-project-title;
+        margin-bottom: 30px;
+    } 
+
+    #connect p {
+        font-size: v.$desktop-projectpage-body;
+        line-height: 30px;
+    }
+
+    #connect-intro {
+        justify-items: center;
+        align-self: center;
+    }
+    
     #contact-form {
         margin: 30px 0 30px 0;
+        
     
         form {
-            width: 600px;
-            height: 480px;
-        }
-    
-        input[type=text]:focus, input[type=email]:focus, textarea:focus {
-            font-size: 15px;
-            margin: 5px;
+            width: 100%;
+            padding: 30px;
+            height: 540px;
         }
     
         input {
-            width: 600px;
+            width: 100%;
             height: 20px;
         }
     
         textarea {
-            width: 600px;
-            height: 200px;
+            width: 100%;
+            margin-bottom: 15px;
         }
-    
-        #send-button {
-            width: 200px;
-            margin-left: 67%;
-        }
-    
 
+        #send-button {
+            height: 40px;
+        }
+    
     }
 
 }
@@ -128,58 +151,37 @@
 @media screen and (min-width: 1200px) {
 
     #connect {
-        padding-top: 170px;
-        margin: 0 15%;
-        
-        h2 {
-            padding-bottom: 30px;
-            font-size: 40px;
-        }
-
-        p {
-            font-size: 20px;
-            padding-bottom: 20px;
-        }
-
-        h2, p {
-            margin: 0 30px;
-        }
+        margin: 0 150px;
     }
 
-
+    #connect-intro {
+        justify-items: center;
+        align-self: center;
+    }
+    
     #contact-form {
         margin: 30px 0 30px 0;
-
-        form {
-            width: 860px;
-            height: 470px;
-            padding: 40px;
-        }
+        
     
-        input[type=text]:focus, input[type=email]:focus, textarea:focus {
-            font-size: 15px;
-            margin: 5px;
-            font-size: 20px;
+        form {
+            width: 100%;
+            padding: 30px;
+            height: 560px;
         }
     
         input {
-            width: 840px;
+            width: 100%;
             height: 20px;
-            font-size: 17px;
         }
     
         textarea {
-            width: 840px;
-            height: 200px;
-            font-size: 17px;
+            width: 100%;
         }
-    
-        #send-button {
-            width: 230px;
-            height: 40px;
-            margin-left: 72%;
-        }
-    
 
+        #send-button {
+            width: 180px;
+            height: 45px;
     }
+}
+
 }

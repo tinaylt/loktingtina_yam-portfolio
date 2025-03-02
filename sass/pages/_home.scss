@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
 
 
 /*Basic html reset*/
@@ -13,10 +14,12 @@ p, h1, h2, h3, h4, h5 {
 }
 
 body {
-   margin: 0px; 
-   padding: 0px;
-//    height: 100%;
+    margin: 0px; 
+    padding: 0px;
     position: relative;
+    justify-items: center;
+    align-self: center;
+    overflow: hidden;
 }
 
 html {
@@ -28,7 +31,7 @@ html {
 }
 
 h2, h3, h4, h5, h6, p {
-    color: v.$body-text-colour;
+    color: v.$primary-colour;
 }
 
 li {
@@ -46,57 +49,180 @@ a {
     transition: .3 ease-in-out;
 }
 
-.message-box {
-    margin: 25px 10px;
-    background-color: v.$secondary-colour;
-    padding: 10px;
-    border-radius: v.$base-border;
+.desktop-size {
+    display: none;
+}
+
+//hero//
+
+#hero {
+    margin: 30px;
     position: relative;
 }
 
-#header-message {
-    grid-row-start: 1;
-    z-index: 4;
-    margin: 200px 20px 5px 20px;
-}
+#hero-h3 {
+    margin-top: 20px;
 
-#about-me-message {
-    width: 250px;
-    overflow: hidden;
-    cursor: pointer;
-
-    .tick {
-        position: relative;
-        margin-top: 0;
+    h3{
+    font-size: v.$mobile-header-font-size;
     }
 }
 
-#about-img-container {
-    width: 250px;
-    height: 150px;
-    overflow: hidden;
-    margin-bottom: 10px;
+#hero-p {
+
+    margin-top: 30px;
+    font-size: v.$mobile-project-font-size;
+
+    p {
+        font-size: v.$mobile-project-font-size;
+        line-height: 25px;
+    }
 }
 
-#about-img-container img {
-    object-fit: contain;
-    height: auto;
-    transform: translateY(-40px);
+#hello {
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    justify-self: center;
 }
 
+.graphic-box {
+    width: 280px;
+    height: 280px;
+    background-color: #608ec6ba;
+    border-radius: 20px;
+}
 
-.tick {
-    text-align: right;
+#graphic1 {
     position: absolute;
-    right: 2.5%;
-    margin-top: -15px;
+    top: -10%;
+    left: 0;
+    transform: scale(1.2);
+    // height:max-content;
+    // justify-self: center;
+}
+
+.graphic2 {
+    margin-left: 15px;
+    margin-top: 5px;
+    filter: drop-shadow(3px -3px rgba(129, 129, 129, 0.389));
+}
+
+//Project section//
+
+#projects {
+    margin: 40px 0 0 0;
+}
+
+#projects h2 {
+    margin: 80px 30px;
+    font-size: v.$mobile-header-font-size;
+    color: v.$bg-white;
+}
+
+#grid-bg {
+    background-color: v.$secondary-colour-two;
+    width: 100vw;
+    height: max-content;
+    background-color: v.$secondary-colour-two;
+    background-image: url(../images/bg-transparent.png);
+    background-size: contain;
+    background-repeat: repeat-y;
+    border: 0.1px solid #ffffff8c;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.project {
+    height: max-content;
+    padding: 10px;
+    background-color: v.$bg-white;
+    justify-content: center;
+    padding-bottom: 15px;
+    margin-top: 50px;
+    margin-left: -4%;
+    margin-bottom: 40%;
+    width: 100%;
+}
+
+.project-thumbnail {
+    width: 320px;
+    height: auto;
+    align-items: center;
+    justify-self: center;
+}
+
+.desciption {
+    display: none;
+    margin: 10px 0;
+    width: 320px;
+    padding: 0;
+    transition: all .5s ease-in;
+    margin-left: 5px;
+}
+
+#project-brief {
+    width: 320px;
+}
+
+.project:hover {
+    filter: drop-shadow(8px 8px #595959c8);
+
+    .desciption {
+        display: block;
+    }
+
+    .project-thumbnail img {
+        transform: rotate(1deg);
+        transition: all .5s ease-in;
+    }
+
+    .project-button {
+        background-color: v.$primary-colour;
+    }
+}
+
+.full-width-grid-con .wrap-container {
+    grid-column: 1/-1;
+}
+
+
+.projects-title {
+    margin-top: 10px;
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.desciption p {
+    color: rgb(112, 111, 111);
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.categories {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: grey;
+    margin-left: 5px;
+}
+
+.project-button {
+    background-color: grey;
+    padding: 10px 3px;
+    // width: 130px;
+    text-align: center;
+    border-radius: 30px;
+    color: v.$bg-white;
+    width: 120px;
+    float: right;
+    font-size: 15px;
 }
 
 //Video Container//
 
 #video-container {
-    border: 12px solid v.$secondary-colour;
-    margin: 20% 5%;
+    border: 2px solid v.$primary-colour;
+    margin: 5%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -107,72 +233,10 @@ a {
     left: 0;
     padding: 15px;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.722);
     position: absolute;
     display: flex;
     transition: all 0.2s ease;
-
-    /*********** Baseline, reset styles ***********/
-input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    background: transparent;
-    cursor: pointer;
-    width: 8rem;
-  }
-  
-  /* Removes default focus */
-  input[type="range"]:focus {
-    outline: none;
-  }
-  
-  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
-  /* slider track */
-  input[type="range"]::-webkit-slider-runnable-track {
-    background-color: #6fc3df;
-    border-radius: 0.5rem;
-    height: 0.5rem;
-  }
-  
-  /* slider thumb */
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    margin-top: -4px; /* Centers thumb on the track */
-    background-color: #efef6e;
-    border-radius: 0.5rem;
-    height: 1rem;
-    width: 1rem;
-  }
-  
-  input[type="range"]:focus::-webkit-slider-thumb {
-    outline: 3px solid #efef6e;
-    outline-offset: 0.125rem;
-  }
-  
-  /*********** Firefox styles ***********/
-  /* slider track */
-  input[type="range"]::-moz-range-track {
-    background-color: #6fc3df;
-    border-radius: 0.5rem;
-    height: 0.5rem;
-  }
-  
-  /* slider thumb */
-  input[type="range"]::-moz-range-thumb {
-    background-color: #efef6e;
-    border: none; /*Removes extra border that FF applies*/
-    border-radius: 0.5rem;
-    height: 1rem;
-    width: 1rem;
-  }
-  
-  input[type="range"]:focus::-moz-range-thumb{
-    outline: 3px solid #efef6e;
-    outline-offset: 0.125rem;
-  }
-
-
 }
 
 .video-controls.hide {
@@ -183,11 +247,12 @@ input[type="range"] {
 .fa-solid, .fa-play, .fa-pause, .fa-stop {
     font-size: 25px;
     margin-right: 28px;
-    color: v.$primary-colour-two;
+    color: v.$primary-colour;
 }
 
 .fa-play {
     margin-left: 10px;
+    color: v.$primary-colour;
 }
 
 .fa-volume-up {
@@ -206,176 +271,215 @@ button {
 
 
 
-
-
-
-//Projects//
-
-#projects {
-    h2 {
-        padding-bottom: 0px;
-        font-size: 35px;
-        font-weight: 400;
-        margin-left: 5%;
-    }
-}
-
-.section-line-start {
-    border-bottom: 2px dashed v.$line-colour;
-    margin: 30px -10px;
-}
-
-.section-line-end {
-    border-bottom: 2px dashed v.$line-colour;
-    margin: 30px -10px 10px -10px;
-}
-
-#projects .project-thumbnail {
-    text-align: center;
-    margin: 25px 25px 10px 25px;
-}
-
-.project-container {
-    background-color: v.$secondary-colour;
-    border-radius: 20px;
-    margin: 10px 30px 30px 30px;
-    padding: 0 0 25px 0;
-    cursor: pointer;
-    filter: drop-shadow(2px 2px 4px rgb(184, 184, 184));
-    transition: transform 0.4s ease-in;
-    overflow: hidden;
-}
-
-
-.project-container:hover {
-    transform: scale(1.015);
-    background-color: v.$primary-colour;
-}
-
-.project-container p {
-    margin-left: 30px;
-}
-
-.project-container h3 {
-    margin-left: 30px;
-}
-
 @media screen and (min-width: 768px) {
 
     //hero message//
 
-    .message-box {
-        padding: 15px;
+    #hero {
+        padding-bottom: 50px;
+    }
 
-        p {
-            font-size: v.$tablet-header-font-size;
+    #hero-h3 {
+        margin-top: 20px;
+    
+        h3{
+        font-size: 60px;
         }
     }
+
+    #hero-p {
+        margin-top: 20px;
+        
+    }
+
+    #hero-p p {
+        font-size: 17px;
+        line-height: 28px;
+    }
+
+    .mobile-size {
+        display: none;
+    }
+
+    .desktop-size {
+        display: block;
+    }
     
-    #header-message {
+    #hello {
+        margin-top: 0;
         grid-row-start: 1;
-        z-index: 4;
-        margin: 180px 0px 5px 0px;
+        grid-row-end: 3;
     }
-    
-    #about-me-message {
+
+    .graphic-box {
         width: 300px;
-        padding-bottom: 9px;
+        height: 300px;
+        background-color: #608ec6ba;
+        justify-self: center;
+        margin-top: 80px;
+        border-radius: 20px;
     }
     
-    #about-img-container {
-        width: 300px;
-        margin-bottom: 8px;
-    }
-    
-    #about-img-container img {
-        transform: translateY(-70px);
-    }
-    
-    
-    .tick {
-        text-align: right;
+    #graphic1 {
         position: absolute;
-        right: 2.5%;
-        margin-top: -20px;
-    }
-
-
-    #video-container {
-        border: 15px solid v.$secondary-colour;
-        margin: 20% 10%;
+        top: 13%;
+        left: 0;
+        width: 100%;
     }
     
-    //Project//
+    .graphic2 {
+        margin-left: 17px;
+        margin-top: 7px;
+    }
+    
+    //Project section//
 
     #projects {
-        h2 {
-            margin-left: 20px;
+        margin: 150px 0 0 0;
+    }
+
+    #projects h2 {
+        margin: 50px 40px;
+        font-size: 80px;
+    }
+
+    #grid-bg {
+        background-size: 70%;
+        background-repeat: repeat;
+        padding-bottom: 150px;
+    }
+
+    .project {
+        margin-left: 0;
+        margin-bottom: 15%;
+        width: 90%;
+    }
+
+    .project-thumbnail {
+        width: 320px;
+        justify-self: left;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    .desciption {
+        width: 270px;
+        margin-left: 0;
+        padding-left: 5px;
+    }
+
+    #project-brief {
+        width: 270px;
+        margin-left: -12%;
+    }
+
+
+    .projects-title {
+        margin-top: 60%;
+        margin-left: 0;
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgb(157, 157, 157);
+    }
+
+    .desciption p {
+        color: rgb(112, 111, 111);
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .categories {
+        margin-left: 0;
+        text-align: right;
+        padding-top: 5px;
+    }
+
+    .project-button {
+        margin-top: 33%;
+    }
+
+    .project:hover {
+    
+        .project-button {
+            margin-top: 5%;
         }
     }
     
-    .section-line-start {
-        margin: 30px -5px;
+      //Video//
+
+      #video-container {
+        margin: 5%;
     }
-    
-    .section-line-end {
-        margin: 30px -5px 10px -5px;
-    }
-    
-    #projects .project-thumbnail {
-        padding: 0 15px;
-    }
-    
-    .project-container {
-        margin: 25px 20px;
-        padding: 0 0 25px 0;
-    }
-    
-    .project-container:hover {
-        transform: scale(1.015);
-        background-color: v.$primary-colour;
-    }
-    
-    .project-container p {
-        margin-left: 30px;
-    }
-    
-    .project-container h3 {
-        margin-left: 30px;
-    }
+
     
 }
 
+
+
 @media screen and (min-width: 1200px) {
 
-    .message-box {
-        padding: 15px;
-        width: 600px;
-    }
-    
-    #header-message {
-        grid-row-start: 1;
-        z-index: 4;
-        margin: 200px 20px 5px 60px;
+    #hero {
+        margin-left: -10px;
     }
 
-    #projects {
-        h2 {
-            font-size: 50px;
+    #hero-h3 {
+        margin-top: 10px;
+    
+        h3{
+        font-size: v.$desktop-header-font-size;
         }
     }
 
-    .project-container {
-        margin: 25px 5px;
+    #hero-p p {
+        font-size: 20px;
+        line-height: 30px;
+        
     }
 
-    .section-line-start {
-        margin: 40px -8%;
+    #hello {
+        margin-top: -5%;
+        grid-row-start: 1;
+        grid-row-end: 3;
     }
-    
-    .section-line-end {
-        margin: 40px -8% 20px -8%;
+
+    .graphic-box {
+        width: 350px;
+        height: 350px;
     }
+
+        //Project section//
+
+        #projects {
+            margin: 150px 0 0 0;
+        }
     
+        #projects h2 {
+            margin: 100px 100px;
+            font-size: 80px;
+        }
+    
+        .project {
+            margin-left: 0;
+            margin-bottom: 10%;
+            width: 95%;
+        }
+    
+        .project-thumbnail {
+            width: 310px;
+        }
+    
+        .desciption {
+            width: 220px;
+        }
+    
+        #project-brief {
+            width: 220px;
+            margin-left: -7%;
+        }
+    
+      //Video//
+
+      #video-container {
+        margin: 5% 10%;
+    }
 
 }

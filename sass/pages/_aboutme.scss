@@ -1,0 +1,279 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+#aboutme {
+    margin: 30px;
+}
+
+#aboutme h2 {
+    margin-top: 40px;
+    font-size: v.$mobile-projectpage-header;
+}
+
+#aboutMe-close-button {
+    width: 40px;
+    height: 40px;
+    background-color: v.$primary-colour;
+    border-radius:8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    justify-self: right;
+}
+
+#aboutMe-close-button:hover {
+    transform: translateY(-3px);
+}
+
+.aboutme-close {
+    width: 80%;
+    height: 4px;
+    background-color: v.$bg-white;
+    border-radius: 10px;
+    margin-left: 15%;
+}
+
+.aboutme-close:nth-child(1) {
+    transform: rotate(45deg) translate(0px, 3px);
+}
+
+.aboutme-close:nth-child(2) {
+    transform: rotate(-45deg) translate(0px, -3px);
+}
+
+.mypic {
+    position: relative;
+    margin: 30px 0 50px 0;
+}
+
+.mypic-bg {
+    width: 100%;
+    height: 100%;
+    background-color: v.$primary-colour;
+    position: absolute;
+    transform: translate(10px, 10px);
+}
+
+.mypic img {
+    position: relative;
+}
+
+.about-me-para {
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+
+#knowledge h3 {
+    font-size: v.$mobile-projectpage-header;
+}
+
+#design-process {
+    margin: 20px 0 70px 0;
+}
+
+#design-process ul {
+    margin: 0;
+    padding: 0;
+    border: 1px solid v.$primary-colour;
+    padding: 0 10px;
+    border-radius: 20px;
+    box-shadow: 8px 8px v.$primary-colour;
+}
+
+#design-process ul li {
+    padding: 15px;
+    font-size: v.$mobile-project-title;
+    border-bottom: 2px dashed v.$secondary-colour-two;
+}
+
+#design-process ul li:last-child {
+    border-bottom: none;
+}
+
+#design-process ul li span {
+    margin-right: 30px;
+    font-size: 27px;
+}
+
+#design-software {
+    @include m.software-box;
+    border: 1px solid v.$primary-colour;
+}
+
+#design-software ul {
+    @include m.software-box-ul;
+}
+
+#design-software ul li {
+    @include m.software-box-ul-li;
+}
+
+.circle {
+    width: 17px;
+    height: 17px;
+    border-radius: 10px;
+    background-color: v.$primary-colour;
+    margin: 0 10px;
+    margin-top: 3px;
+}
+
+.square {
+    width: 17px;
+    height: 17px;
+    background-color: v.$primary-colour;
+    margin: 0 10px;
+    margin-top: 3px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    margin: 0 10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid v.$primary-colour;
+}
+
+.triangle-blue {
+    width: 0;
+    height: 0;
+    margin: 0 10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid v.$bg-white;
+}
+
+
+
+#development {
+    margin-top: 30px
+}
+
+
+#development-tech {
+    @include m.software-box;
+    background-color: v.$secondary-colour-two;
+    border: 1px solid v.$bg-white
+}
+
+#development-tech ul {
+    @include m.software-box-ul;
+}
+
+#development-tech ul li {
+    @include m.software-box-ul-li;
+    color: v.$bg-white;
+}
+
+.white {
+    background-color: v.$bg-white;
+}
+
+@media screen and (min-width: 768px) {
+
+    #aboutme {
+        margin: 50px 5%;
+    }
+
+    #development {
+        margin-top: 0px
+    }
+
+    #aboutme h2 {
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+
+    .about-me-para {
+        line-height: 30px;
+        margin-bottom: 50px;
+        font-size: 18px;
+    }
+
+    #knowledge h3 {
+        margin-bottom: 10px;
+    }
+
+
+#design-process ul {
+    margin: 0;
+    padding: 0;
+    border: 1px solid v.$primary-colour;
+    padding: 0 20px;
+    border-radius: 20px;
+    box-shadow: 8px 8px v.$primary-colour;
+}
+
+
+    #design-process ul li {
+        padding: 15px;
+        font-size: 23px;
+        padding-left: 7%;
+    }
+
+    #design-process ul li span {
+        margin-right: 35px;
+        font-size: 32px;
+    }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    #aboutMe-close-button {
+        width: 50px;
+        height: 50px;
+        background-color: v.$primary-colour;
+        border-radius:8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        justify-self: right;
+    }
+    
+    #aboutMe-close-button:hover {
+        transform: translateY(-3px);
+    }
+    
+    .aboutme-close {
+        width: 80%;
+        height: 6px;
+        background-color: v.$bg-white;
+        border-radius: 10px;
+        margin-left: 15%;
+    }
+    
+    .aboutme-close:nth-child(1) {
+        transform: rotate(45deg) translate(0px, 4px);
+    }
+    
+    .aboutme-close:nth-child(2) {
+        transform: rotate(-45deg) translate(0px, -4px);
+    }
+    
+    
+
+    #aboutme h2 {
+        font-size: 70px;
+        margin-bottom: 20px;
+    }
+
+    #aboutme {
+        margin: 30px 13%;
+    }
+
+    .about-me-para {
+        line-height: 35px;
+        font-size: 20px;
+    }
+
+    #design-process ul li span {
+        margin-right: 45px;
+        font-size: 32px;
+    }
+
+
+}

@@ -16,13 +16,13 @@
 </head>
 
 <body>
-    <header>
+<header>
         <h2 class="hidden">Tina's Portfolio</h2>
         <div id="sticky-nav" class="grid-con">
             
-            <div id="main-logo" class="col-start-1 col-end-4 m-col-start-1 m-col-end-7">
+            <div id="main-logo" class="col-start-1 col-end-4 m-col-start-1 m-col-end-5">
                 <a href="index.php">
-                    <img src="images/logo-final.svg" alt="logo">
+                    <img src="images/logo-final-v2.png" alt="logo">
                 </a>
             </div>
 
@@ -31,11 +31,11 @@
                 <span class="line"></span>
             </div>
 
-            <div class="col-span-full m-col-start-7 m-col-end-13">
+            <div class="col-span-full m-col-start-6 m-col-end-13">
                 <nav id="mobile-nav" class="hide">
                     <ul>
-                        <li><p><a href="index.php">Home</a></p></li>
-                        <li><p><a href="#projects">Projects</a></p></li>
+                        <li><p><a href="about.html">About</a></p></li>
+                        <li><p><a href="index.php">Projects</a></p></li>
                         <li><p><a href="contact.php">Contact</a></p></li>
                     </ul>
                 </nav>
@@ -43,14 +43,14 @@
         </div>
     </header>
 
-    <section id="connect">
+    <section id="connect" class="grid-con">
         <h2>CONNECT</h2>
 
-        <div id="connect-intro">
-            <p>I'd love to hear you! Whether you have questions, feedbacks, project inquires or a cup of coffee &#x2615, feel free to reach out!  </p>
+        <div id="connect-intro" class="col-span-full m-col-span-full">
+            <p>I'd love to hear you! Whether you have questions, feedbacks, projects inquires or a cup of coffee &#x2615, feel free to reach out!  </p>
         </div>
 
-        <div id="contact-form">
+        <div id="contact-form" class="col-span-full m-col-span-full">
             <form method="post" action="sendmail.php">
                 <label for="first_name">First Name:</label><br>
                 <input type="text" name="first_name" id="first_name">
@@ -63,8 +63,8 @@
                 <br><br>
                 <label for="message">Message:</label><br>
                 <textarea name="message" id="message"></textarea>
-                <br><br>
-                <input type="submit" value="send" id="send-button">
+                <br>
+                <input type="submit" value="Submit" id="send-button">
             </form>
             
         </div>
