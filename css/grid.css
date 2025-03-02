@@ -5,13 +5,6 @@
     display: none;
 }
 
-.box {
-    margin: 5px;
-    border: 1px solid #efefef;
-    background-color: #efefef;
-    color: #2B2A2A;
-}
-  
 .full-width-grid-con {
     /* set this container as a grid, with 3 columns
     the other grid will sit in the middle column, this allows for overlapping content */

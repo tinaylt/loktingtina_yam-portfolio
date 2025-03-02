@@ -1,5 +1,7 @@
 <?php 
 
+// echo 'make sure this is working';
+
 require_once('includes/connect.php');
 
 $fname = $_POST['first_name'];
@@ -34,26 +36,34 @@ if(empty($email)) {
 
 if(empty($errors)) {
 
-    $query = "INSERT INTO contacts (fname, lname, email, message) VALUES ('.$fname.','.$lname.','.$email.','.$msg.')";
-
-    if(mysqli_query($connect, $query)) {
+    // $query = "INSERT INTO contacts (fname, lname, email, message) VALUES ('.$fname.','.$lname.','.$email.','.$msg.')";
+    $query = "INSERT INTO contacts (fname, lname, email, message) VALUES (:fname, :lname, :email, :msg)";
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(':fname', $fname);
+    $stmt->bindParam(':lname', $lname);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':msg', $msg);
+   
+    if($stmt->execute()) {
         
         $to = 'l_yam203842@fanshaweonline.ca';
         $subject = 'You got a message from your portfolio site!';
+        echo "Email sent successfully!";
 
         $message = "You have received a new contact form submission:\n\n";
         $message .= "Name: ".$fname." ".$lname."\n";
         $message .= "Email: ".$email."\n\n";
+        $message .= "Message:\n" . $msg;
 
         mail($to,$subject,$message);
 
         header('Location: contact.php');
-
-    }else {        
+        exit;
+        
+    }else {
         for($i=0; $i < count($errors); $i++) {
             echo $errors[$i].'<br>';
+        }
     }
-}
-
 }
 ?>

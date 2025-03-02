@@ -1,36 +1,48 @@
 @use 'fonts';
 //font//
-$base-font-family: 'lato',sans-serif, Helvetica;
-$mobile-base-font-size: 14px;
-$mobile-header-size: 17px;
-$base-font-weight: 300;
-$mobile-font-bold: 700;
-$project-subtitle: 600;
-$mobile-line-height: 20px;
-$tablet-line-height: 25px;
-$desktop-line-height: 30px;
+$base-font-family: "Lucida Grande","Lunasima", sans-serif;
+//mobile font size//
 
-//tablet font//
-$tablet-header-font-size: 20px;
-$tablet-body-font-size: 18px;
+$mobile-header-font-size: 55px;
+$mobile-project-font-size: 15px;
+$mobile-project-title: 20px;
+$mobile-project-categories: 15px;
+$mobile-menu-font-size: 26px;
 
-//Desktop font//
-$desktop-header-font-size: 27px;
-$desktop-body-font-size: 20px;
+$mobile-projectpage-header: 40px;
+$mobile-projectpage-body: 12px;
+$mobile-projectpage-subheader: 25px;
+$mobile-projectpage-listheader: 15px;
 
+//tablet font size//
+
+
+
+//desktop font size//
+$desktop-menu-font: 20px;
+$desktop-header-font-size: 100px;
+$desktop-project-font-size: 28px;
+$desktop-project-title: 60px;
+$desktop-project-categories: 60px;
+
+$desktop-projectpage-header: 100px;
+$desktop-projectpage-body: 18px;
+$desktop-projectpage-subheader: 30px;
+$desktop-projectpage-listheader: 20px;
 
 //colour//
-$primary-colour: #efef6e;
-$primary-colour-two: #6fc3df;
-$secondary-colour: #F8F8F8;
-$body-text-colour: #2B2A2A;
-$line-colour: #E0DDDD;
-$base-colour: white;
+$primary-colour: #1065CB;
+$secondary-colour-two: #608EC6;
+$bg-white: white;
+$text-colour: #1065CB;
+$line-colour: #608EC6;
+$backup-colour: #bfbfbf;
+$projectlist-bg: #F8F8F8;
+$grey-colour: #6e6e6e;
 
 
 //basic style//
-$base-border: 10px;
-$tablet-border: 25px;
+
 
 
 

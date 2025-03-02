@@ -3,21 +3,25 @@
 
 footer {
     background-color: v.$primary-colour;
-
+    justify-content: center;
+    align-items: center;
+    width: 100VW;
+    p {
+        color: v.$bg-white;
+    }
 }
 
 #footer {
-    padding: 20px 10px;
-    margin-top: auto;
+    padding: 30px;
+    position: sticky;
 }
 
-#copyright {
-    text-align: left;
-}
-
-#mark {
+.footer-right {
     text-align: right;
 }
+
+
+
 
 
 
