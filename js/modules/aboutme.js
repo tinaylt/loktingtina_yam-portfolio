@@ -140,7 +140,7 @@ export function aboutMeAnimation() {
             start: 'top 80%',
             end: 'top 80%',
             scrub: 0.5,
-            markers: true
+            markers: false
         },
         opacity: 0,
         ease: 'power1.out'

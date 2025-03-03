@@ -51,12 +51,12 @@
         </div>
 
         <div id="contact-form" class="col-span-full m-col-span-full">
-            <form method="post" action="sendmail.php">
-                <label for="first_name">First Name:</label><br>
-                <input type="text" name="first_name" id="first_name">
+            <form id="contacts" method="POST">
+                <label for="fname">First Name:</label><br>
+                <input type="text" name="fname" id="fname">
                 <br><br>
-                <label for="last_name">Last Name:</label><br>
-                <input type="text" name="last_name" id="last_name">
+                <label for="lname">Last Name:</label><br>
+                <input type="text" name="lname" id="lname">
                 <br><br>
                 <label for="email">Email: </label><br>
                 <input type="text" name="email" id="email">
@@ -65,6 +65,7 @@
                 <textarea name="message" id="message"></textarea>
                 <br>
                 <input type="submit" value="Submit" id="send-button">
+                <section id="feedback"></section>
             </form>
             
         </div>
