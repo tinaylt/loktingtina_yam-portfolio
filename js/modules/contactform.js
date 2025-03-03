@@ -6,8 +6,8 @@ export function contactFormFunction() {
         event.preventDefault();
     
         const thisform = event.currentTarget;
-        const url = "sendmessage.php";
-        const formdata = `fname=${thisform.elements.fname.value}&lname=${thisform.elements.lname.value}&email=${thisform.elements.email.value}&msg=${thisform.elements.message.value}`;
+        const url = "sendfrom.php";
+        const formdata = `fname=${thisform.elements.fname.value}&lname=${thisform.elements.lname.value}&email=${thisform.elements.email.value}&message=${thisform.elements.message.value}`;
     
         console.log(formdata);
     
@@ -21,7 +21,10 @@ export function contactFormFunction() {
         .then(response => response.json())
         .then(response => {
             console.log(response);
-            feedback.innerHTML = ""; // Clear feedback section before appending new content
+
+            // console.log("Message value:", thisform.elements.message.value);
+
+            feedback.innerHTML = "";
             if(response.errors) {
                 response.errors.forEach(error => {
                     const errorElement = document.createElement("p");
@@ -29,12 +32,12 @@ export function contactFormFunction() {
                     feedback.appendChild(errorElement);
                 });
             } else {
-                contactForm.reset(); // Reset the form if no errors
+                contactForm.reset();
                 const messageElement = document.createElement("p");
                 messageElement.textContent = response.message;
                 feedback.appendChild(messageElement);
             }
-            feedback.scrollIntoView({behavior: 'smooth', block: 'end'}); // Scroll to feedback section
+            feedback.scrollIntoView({behavior: 'smooth', block: 'end'});
         })
         .catch(errors => {
             console.log(errors);
