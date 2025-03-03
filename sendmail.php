@@ -4,17 +4,17 @@
 
 require_once('includes/connect.php');
 
-$fname = $_POST['first_name'];
-$lname = $_POST['last_name'];
+$fname = $_POST['fname'];
+$lname = $_POST['lname'];
 $email = $_POST['email'];
-$msg = $_POST['message'];
+$message = $_POST['message'];
 
 $errors = [];
 
 $fname = trim($fname);
 $lname = trim($lname);
 $email = trim($email);
-$msg = trim($msg);
+$msg = trim($message);
 
 if(empty($lname)) {
     $errors['last_name'] = 'Please fill in your last name';
@@ -24,7 +24,7 @@ if(empty($fname)) {
     $errors['first_name'] = 'Please fill in your first name';
 }
 
-if(empty($msg)) {
+if(empty($message)) {
     $errors['message'] = 'please leave a message for me';
 }
 
@@ -37,12 +37,12 @@ if(empty($email)) {
 if(empty($errors)) {
 
     // $query = "INSERT INTO contacts (fname, lname, email, message) VALUES ('.$fname.','.$lname.','.$email.','.$msg.')";
-    $query = "INSERT INTO contacts (fname, lname, email, message) VALUES (:fname, :lname, :email, :msg)";
+    $query = "INSERT INTO contacts (fname, lname, email, message) VALUES (:fname, :lname, :email, :message)";
     $stmt = $connection->prepare($query);
     $stmt->bindParam(':fname', $fname);
     $stmt->bindParam(':lname', $lname);
     $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':msg', $msg);
+    $stmt->bindParam(':message', $message);
    
     if($stmt->execute()) {
         
