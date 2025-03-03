@@ -42,6 +42,14 @@
     transform: rotate(-45deg) translate(0px, -3px);
 }
 
+#clip {
+    position: absolute;
+    z-index: 3;
+    top: -3%;
+    right: 10%;
+    width: 6%;
+}
+
 .mypic {
     position: relative;
     margin: 30px 0 50px 0;
@@ -64,6 +72,10 @@
     margin-bottom: 50px;
 }
 
+.about-me-para p {
+    color: v.$grey-colour;
+}
+
 #knowledge h3 {
     font-size: v.$mobile-projectpage-header;
 }
@@ -83,8 +95,12 @@
 
 #design-process ul li {
     padding: 15px;
-    font-size: v.$mobile-project-title;
+    font-size: 17px;
     border-bottom: 2px dashed v.$secondary-colour-two;
+}
+
+#design-process ul li p {
+    color: v.$grey-colour;
 }
 
 #design-process ul li:last-child {
@@ -92,8 +108,9 @@
 }
 
 #design-process ul li span {
-    margin-right: 30px;
-    font-size: 27px;
+    margin-right: 15px;
+    font-size: 25px;
+    color: v.$primary-colour
 }
 
 #design-software {
@@ -186,9 +203,9 @@
     }
 
     .about-me-para {
-        line-height: 30px;
+        line-height: 25px;
         margin-bottom: 50px;
-        font-size: 18px;
+        font-size: 17px;
     }
 
     #knowledge h3 {
@@ -222,6 +239,7 @@
 
 @media screen and (min-width: 1200px) {
 
+
     #aboutMe-close-button {
         width: 50px;
         height: 50px;
@@ -232,6 +250,7 @@
         justify-content: center;
         cursor: pointer;
         justify-self: right;
+        margin-top: 50px;
     }
     
     #aboutMe-close-button:hover {
@@ -254,8 +273,6 @@
         transform: rotate(-45deg) translate(0px, -4px);
     }
     
-    
-
     #aboutme h2 {
         font-size: 70px;
         margin-bottom: 20px;
@@ -266,8 +283,8 @@
     }
 
     .about-me-para {
-        line-height: 35px;
-        font-size: 20px;
+        line-height: 25px;
+        font-size: 18px;
     }
 
     #design-process ul li span {

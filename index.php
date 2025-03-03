@@ -29,10 +29,12 @@ $stmt->execute();
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
-    <script defer src="js/main.js"></script>
+    <script defer src="js/SplitText.js"></script>
+    <script type="module" defer src="js/home.js"></script>
 </head>
 
 <body>
+    <div id="panel-1">
     <header>
         <h2 class="hidden">Tina's Portfolio</h2>
         <div id="sticky-nav" class="grid-con">
@@ -83,6 +85,7 @@ $stmt->execute();
             </div>
         </div>
     </section>
+    </div>
 
     <section id="projects">
         <div id="grid-bg" class="full-width-grid-con">

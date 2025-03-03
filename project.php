@@ -28,8 +28,8 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
-    <script defer src="js/main.js"></script>
+    <script defer src="js/SplitText.js"></script>
+    <script type="module" defer src="js/project.js"></script>
 </head>
 
 <body id="project-page">
@@ -76,7 +76,7 @@
             </div>
 
             <div id="issue" class="col-span-full m-col-span-full l-col-span-6 text-section">
-                <h3>Issue:</h3>
+                <h3>Issue</h3>
 
                 <div class="para">
                     <div class="circle-p"></div>
@@ -94,8 +94,8 @@
                 </div>
             </div>
 
-                        <div id="solution" class="col-span-full m-col-span-full l-col-span-6 text-section">
-                <h3>Solution: </h3>
+            <div id="solution" class="col-span-full m-col-span-full l-col-span-6 text-section">
+                <h3>Solution</h3>
 
                 <div class="para">
                     <div class="circle-p"></div>
@@ -114,7 +114,7 @@
             </div>
 
 
-            <div class="col-span-full m-col-span-6">
+            <div class="col-span-full m-col-span-6 project-image">
                 <img src="'.$image_array[3].'" alt="burple project image">
             </div>
 

@@ -11,8 +11,8 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
-    <script defer src="js/main.js"></script>
+    <script defer src="js/SplitText.js"></script>
+    <script type="module" defer src="js/contact.js"></script>
 </head>
 
 <body>
@@ -44,7 +44,7 @@
     </header>
 
     <section id="connect" class="grid-con">
-        <h2>CONNECT</h2>
+        <h2 class="col-span-full m-col-span-full">CONNECT</h2>
 
         <div id="connect-intro" class="col-span-full m-col-span-full">
             <p>I'd love to hear you! Whether you have questions, feedbacks, projects inquires or a cup of coffee &#x2615, feel free to reach out!  </p>
