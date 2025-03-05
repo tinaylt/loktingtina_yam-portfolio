@@ -1,0 +1,98 @@
+
+#project-record {
+    width: 50%;
+    height: 50px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#project-record p {
+
+    padding: 15px 0;
+}
+
+#project-record a {
+    margin: 0 10px;
+    width: 60px;
+    padding: 10px;
+    background-color: #608EC6;
+    border-radius: 20px;
+    color: white;
+    font-size: 13px;
+}
+
+#add {
+    margin: 50px 0;
+    background-color: rgb(235, 235, 235);
+    width: 100%;
+    height: 100%;
+    padding-left: 16%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    h3 {
+        padding: 10px 0;
+        font-size: 20px;
+    }
+
+    label, input, textarea {
+        margin: 10px 0;
+    }
+
+    textarea {
+        width: 400px;
+        height: 150px;
+    }
+
+    input {
+        width: 200px;
+    }
+}
+
+#edit-project {
+    margin: 30px 0;
+
+    label {
+        color: #1065CB;
+        font-weight: 600;
+    }
+
+    label, input, textarea {
+        margin: 5px 0;
+    }
+
+    textarea{
+        width: 100%;
+        height: 100px;
+        font-size: 13px;
+    }
+}
+
+.image-box {
+    width: 100%;
+}
+
+#login {
+    justify-content: center;
+    margin-top: 40px;
+    display: flex;
+
+    input, label {
+        width: 150px;
+        margin: 5px 0;
+    }
+}
+
+#login-submit {
+    background-color: #1065CB;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 0 auto;
+    cursor: pointer;
+    display: flex;
+    float: right;
+}

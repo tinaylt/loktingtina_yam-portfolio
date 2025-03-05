@@ -6,6 +6,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100VW;
+    font-size: 15px;
     p {
         color: v.$bg-white;
     }
@@ -16,8 +17,21 @@ footer {
     position: sticky;
 }
 
+.footer1 {
+    display: flex;
+}
+
 .footer-right {
     text-align: right;
+}
+
+#resume a, #linkedin a {
+    color: v.$bg-white;
+}
+
+#resume, #linkedin {
+    // display: inline;
+    margin: 0 5px;
 }
 
 

@@ -36,6 +36,7 @@ export function contactFormFunction() {
                 const messageElement = document.createElement("p");
                 messageElement.textContent = response.message;
                 feedback.appendChild(messageElement);
+                //create and img, then append the image to feedback div
             }
             feedback.scrollIntoView({behavior: 'smooth', block: 'end'});
         })

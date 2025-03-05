@@ -98,7 +98,7 @@ $stmt->execute();
 
                 echo'<div class="project grid-con col-span-full m-col-start-1 m-col-end-13 l-col-span-6">
                     <div class="project-thumbnail col-span-full m-col-start-1 m-col-end-8">
-                        <img src="'.$row['thumbnail'].'" alt="burple thumbnail">
+                        <img src="images/'.$row['thumbnail'].'" alt="burple thumbnail">
                     </div>
                     <div id="project-brief" class="col-span-full m-col-start-8 m-col-end-13 ">
                         <div class="projects-title">
@@ -138,8 +138,10 @@ $stmt->execute();
 
     <footer>
         <div id="footer" class="grid-con">
-            <div class="col-start-1 col-end-3 m-col-start-1 m-col-end-8">
+            <div class="col-start-1 col-end-3 m-col-start-1 m-col-end-8 footer1">
                 <p>	&#169; 2024</p>
+                <p id="linkedin"><a href="http://www.linkedin.com/in/tinayam">Linkedin</a></p>
+                <p id="resume"><a href="document/resume.pdf" target="_blank">Resume</a></p>
             </div>
 
             <div class="footer-right col-start-3 col-end-5 m-col-start-8 m-col-end-13">
