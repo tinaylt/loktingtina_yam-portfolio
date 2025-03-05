@@ -96,14 +96,19 @@
         box-shadow: 3px 3px v.$grey-colour;
         border: 1px solid v.$bg-white;
     }
+}
+
+    #feedback {
+        height: 100px;
+    } 
 
     #feedback p {
-        font-size: 15px;
-        line-height: 18px;
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+        line-height: 13px;
         color: rgb(245, 139, 9);
     }
-
-}
 
 @media screen and (min-width: 768px) {
 
@@ -149,9 +154,13 @@
         #send-button {
             height: 40px;
         }
-    
     }
 
+    #feedback p {
+        font-size: 15px;
+        line-height: 15px;
+    }
+    
 }
 
 @media screen and (min-width: 1200px) {
@@ -189,5 +198,11 @@
             height: 45px;
     }
 }
+
+#feedback p {
+    font-size: 17px;
+    line-height: 19px;
+}
+
 
 }

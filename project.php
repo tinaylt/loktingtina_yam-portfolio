@@ -46,7 +46,7 @@
             <P class="col-span-full m-col-span-full project-description">'.$row['details'].'</P>
 
             <div class="col-span-full m-col-span-full main-image">
-                <img src="'.$image_array[0].'" alt="burple project image">
+                <img src="images/'.$image_array[0].'" alt="project Main mage">
             </div>
 
             <div class="col-span-full m-col-span-full l-col-start-1 l-col-end-7 project-box">
@@ -66,13 +66,13 @@
             <div class="col-span-full m-col-span-full project-box">
                 <ul>
                     <li><h3>Credits:</h3></li>
-                    <li>'.$row['credit'].'</li>
+                    <li><p>'.$row['credit'].'</p></li>
                 </ul>
             </div>
 
             <div class="col-span-full m-col-span-full project-image">
-                <img src="'.$image_array[1].'" alt="burple project image">
-                <img src="'.$image_array[2].'" alt="burple project image">
+                <img src="images/'.$image_array[1].'" alt="burple project image">
+                <img src="images/'.$image_array[2].'" alt="burple project image">
             </div>
 
             <div id="issue" class="col-span-full m-col-span-full l-col-span-6 text-section">
@@ -115,11 +115,11 @@
 
 
             <div class="col-span-full m-col-span-6 project-image">
-                <img src="'.$image_array[3].'" alt="burple project image">
+                <img src="images/'.$image_array[3].'" alt="burple project image">
             </div>
 
             <div class="col-span-full m-col-span-6">
-                <img src="'.$image_array[4].'" alt="burple project image6">
+                <img src="images/'.$image_array[4].'" alt="burple project image6">
             </div>
         </section>';
 
