@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-    require_once('includes/connect.php');
+    require_once('includes/connect_local.php');
 
     $query = 'SELECT projects.id, title, thumbnail, details, service, year, credit, issue1, issue2, issue3, solution1, solution2, solution3, GROUP_CONCAT(media.location) AS location  FROM projects, media WHERE projects_id = projects.id AND projects.id =:projectId GROUP BY projects_id';
     $stmt = $connection->prepare($query);
@@ -24,6 +24,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap" rel="stylesheet">
 
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="images/site.webmanifest" />
 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -125,15 +131,13 @@
 
     ?>
     
-<footer>
+    <footer>
         <div id="footer" class="grid-con">
-            <div class="col-start-1 col-end-3 m-col-start-1 m-col-end-8">
-                <p>	&#169; 2024</p>
-            </div>
+            <p id="resume" class="col-start-1 col-end-3 m-col-start-1 m-col-end-7"><a href="document/resume.pdf" target="_blank">Resume</a></p>
+            <p id="linkedin" class="col-start-3 col-end-5 m-col-start-7 m-col-end-13"><a href="http://www.linkedin.com/in/tinayam">Linkedin</a></p>
+            <p class="col-span-full m-col-span-full">&#169; 2024</p>
+            <p class="col-span-full m-col-span-full">Designed by Tina Yam</p>
 
-            <div class="footer-right col-start-3 col-end-5 m-col-start-8 m-col-end-13">
-                <p>Designed by Tina Yam</p>
-            </div>
         </div>
     </footer>
 </body>

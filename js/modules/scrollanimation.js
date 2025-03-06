@@ -49,21 +49,24 @@ export function scrollIndex() {
     });
 
 
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("load", ()=> {
+        setupGraphic();
+        selfGraphic.src = "images/self-graphic-01.png"; 
+    });
+    
+    function setupGraphic() {
         const selfGraphic = document.querySelector("#graphic1");
     
-        selfGraphic.addEventListener("mouseover", function () {
+        selfGraphic.addEventListener("mouseover", ()=> {
             selfGraphic.src = "images/self-graphic-02.png";
             selfGraphic.classList.add('graphic2');
-
-
         });
     
         selfGraphic.addEventListener("mouseout", function () {
             selfGraphic.src = "images/self-graphic-01.png"; 
             selfGraphic.classList.remove('graphic2');
         });
-    });
+    }
 
     const splitProject = new SplitText('#projects h2', {type: 'words,chars'});
 
@@ -84,7 +87,7 @@ export function scrollIndex() {
     projects.forEach((project, index) => {
         gsap.from(project, {
             opacity: 0,
-            x: index % 2 === 0 ? -100 : 100,
+            x: index % 2 === 0 ? -30 : 30,
             duration: 1.5,
             ease: 'elastic.inOut(1.2, 0.75)',
             scrollTrigger: {

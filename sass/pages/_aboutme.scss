@@ -193,6 +193,15 @@
         margin: 50px 5%;
     }
 
+    .aboutme-close {
+        width: 80%;
+        height: 4px;
+        background-color: v.$bg-white;
+        border-radius: 10px;
+        margin-left: 12%;
+    }
+    
+
     #development {
         margin-top: 0px
     }
@@ -262,7 +271,6 @@
         height: 6px;
         background-color: v.$bg-white;
         border-radius: 10px;
-        margin-left: 15%;
     }
     
     .aboutme-close:nth-child(1) {

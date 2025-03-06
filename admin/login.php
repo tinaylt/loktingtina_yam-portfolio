@@ -6,7 +6,7 @@
 //the $_SWWSION 
 session_start();
 
-require_once('../includes/connect.php');
+require_once('../includes/connect_local.php');
 //two things have to be true in order to login//
 $query = 'SELECT * FROM user WHERE username = ? AND password = ?';
 $stmt = $connection->prepare($query);

@@ -2,7 +2,7 @@
 
 <?php
 
-require_once('includes/connect.php');
+require_once('includes/connect_local.php');
 
 $stmt = $connection->prepare('SELECT projects.id AS projects, title, main, thumbnail, brief FROM projects');
 $stmt->execute();
@@ -23,6 +23,13 @@ $stmt->execute();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="images/site.webmanifest" />
 
 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -121,7 +128,7 @@ $stmt->execute();
     </section>
 
 
-    <div id="video-container" class="col-span-full m-col-full">
+    <div id="video-container" class="col-span-full m-col-span-full">
         <video controls preload="metadata" poster="video/video-poster.png">
             <source src="video/demo-reelv2.mp4" type="video/mp4">
         </video>
@@ -138,15 +145,11 @@ $stmt->execute();
 
     <footer>
         <div id="footer" class="grid-con">
-            <div class="col-start-1 col-end-3 m-col-start-1 m-col-end-8 footer1">
-                <p>	&#169; 2024</p>
-                <p id="linkedin"><a href="http://www.linkedin.com/in/tinayam">Linkedin</a></p>
-                <p id="resume"><a href="document/resume.pdf" target="_blank">Resume</a></p>
-            </div>
+            <p id="resume" class="col-start-1 col-end-3 m-col-start-1 m-col-end-7"><a href="document/resume.pdf" target="_blank">Resume</a></p>
+            <p id="linkedin" class="col-start-3 col-end-5 m-col-start-7 m-col-end-13"><a href="http://www.linkedin.com/in/tinayam">Linkedin</a></p>
+            <p class="col-span-full m-col-span-full">&#169; 2024</p>
+            <p class="col-span-full m-col-span-full">Designed by Tina Yam</p>
 
-            <div class="footer-right col-start-3 col-end-5 m-col-start-8 m-col-end-13">
-                <p>Designed by Tina Yam</p>
-            </div>
         </div>
     </footer>
 

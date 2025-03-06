@@ -1,5 +1,5 @@
 <?php
-require_once('../includes/connect.php');
+require_once('../includes/connect_local.php');
 
 // Update the projects table
 $query1 = "UPDATE projects SET title = ?, main = ?, thumbnail = ?, details = ?, brief = ?, service = ?, year = ?, credit = ?, issue1 = ?, issue2 = ?, issue3 = ?, solution1 = ?, solution2 = ?, solution3 = ? WHERE id = ?";
