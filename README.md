@@ -1,13 +1,16 @@
 ## My Portfolio site
 Hello! Nice to meet you! This is my portfolio site, which I designed and developed. All my recent work is showcased on the site. Please take a look if you have time!💙
+Tina's Site: https://www.tinaylt.com/
 
 ### Installation 
 If you want to review my code, please make sure you downloaded the following development tools:
 1. **VS Code** - this is essential for front-end development!
 2. **SASS plug-in** - It is really handy for styling multiple HTML pages. I love storing reusable items as variables.
 3. **SASS Compiler plug-in** - This is a must if you're using SASS; it helps compile your file to main.css.
-5. **GreenSock plug-in** - I used Scroll Trigger, Scroll To and Text Plug to create animations for my site. You may visit [gsap](https://gsap.com) for more information. 
-4. MAMP - I added dynamic content to my portfolio page. I am still in the learning process, although it always gives me a hard time.
+4. **GreenSock plug-in** - I used Scroll Trigger, Scroll To and Text Plug to create animations for my site. You may visit [gsap](https://gsap.com) for more information. 
+5. **MAMP** - I added dynamic content to my portfolio page. I am still in the learning process, although it always gives me a hard time.
+6. **SplitText** - Most of the text animation has been finished in GreenSock Split Text, which is a plugin that you can use it in your site.
+
 
 ### Usage
 Open index.html in your browser (I personally use Google Chrome).
