@@ -19,26 +19,30 @@
     }
 }
 
-
 #connect-intro {
     justify-items: center;
     align-self: center;
 }
 
 #contact-form {
-    margin: 30px 0 30px 0;
+    margin: 30px 0px 30px 0px;
     justify-content: center;
     align-self: center;
     display: flex;
     @include m.mobile-box;
     border: 2px solid v.$primary-colour;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
     
 
     form {
         width: 100%;
-        padding: 25px;
-        height: 550px;
+        padding: 15px;
+        height: auto;
         font-weight: 600;
+        font-size: 13px;
     }
 
     label {
@@ -68,7 +72,7 @@
     input {
         width: 100%;
         height: 20px;
-        font-size: 20px;
+        font-size: 15px;
         color: v.$grey-colour;
     }
 
@@ -81,7 +85,7 @@
     }
 
     #send-button {
-        width: 150px;
+        width: 120px;
         height: 35px;
         border-radius: 50px;
         cursor: pointer;
@@ -89,7 +93,7 @@
         box-shadow: none;
         background-color: v.$primary-colour;
         color: v.$bg-white;
-        font-size: 18px;
+        font-size: 15px;
     }
 
     #send-button:hover {
@@ -97,13 +101,8 @@
         border: 1px solid v.$bg-white;
     }
 }
-
-    #feedback {
-        height: 100px;
-    } 
-
     #feedback p {
-        padding: 0;
+        padding: 5px 0;
         margin: 0;
         font-size: 12px;
         line-height: 13px;
@@ -130,6 +129,7 @@
         justify-items: center;
         align-self: center;
     }
+
     
     #contact-form {
         margin: 30px 0 30px 0;
@@ -138,7 +138,7 @@
         form {
             width: 100%;
             padding: 30px;
-            height: 540px;
+            font-size: 17px;
         }
     
         input {
@@ -152,7 +152,9 @@
         }
 
         #send-button {
+            width: 150px;
             height: 40px;
+            font-size: 18px;
         }
     }
 
@@ -181,7 +183,6 @@
         form {
             width: 100%;
             padding: 30px;
-            height: 560px;
         }
     
         input {

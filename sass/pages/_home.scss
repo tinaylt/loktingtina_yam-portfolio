@@ -4,6 +4,12 @@
 
 /*Basic html reset*/
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 img, embed, object, video, picture {
     max-width: 100%; 
 }
@@ -19,6 +25,10 @@ body {
     position: relative;
     justify-items: center;
     align-self: center;
+    overflow-x: hidden;
+    width: 100%;
+    display: grid;
+    place-items: center; 
 }
 
 html {
@@ -26,6 +36,8 @@ html {
     box-sizing: border-box; 
     // height: 100%;
     margin: 0;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 h2, h3, h4, h5, h6, p {
@@ -132,6 +144,7 @@ a {
     border: 0.1px solid #ffffff8c;
     position: relative;
     padding-bottom: 50px;
+    overflow-x: hidden;
 }
 
 .project {
@@ -144,11 +157,11 @@ a {
     margin-top: 50px;
     margin-left: 0;
     margin-bottom: 40%;
-    width: 90%;
+    width: 95%;
 }
 
 .project-thumbnail {
-    width: 280px;
+    width: 270px;
     height: auto;
     align-items: center;
     justify-self: center;
@@ -157,7 +170,7 @@ a {
 .desciption {
     display: none;
     margin: 10px 0;
-    width: 280px;
+    width: 270px;
     padding: 0;
     transition: all .5s ease-in;
     margin-left: 5px;
@@ -191,7 +204,7 @@ a {
 
 .projects-title {
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 25px;
     margin-left: 5px;
 }
 
@@ -202,7 +215,7 @@ a {
 }
 
 .categories {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 5px;
     color: grey;
     margin-left: 5px;
@@ -210,7 +223,7 @@ a {
 
 .project-button {
     background-color: grey;
-    padding: 10px 3px;
+    padding: 10px 5px;
     // width: 130px;
     text-align: center;
     border-radius: 30px;
@@ -218,18 +231,22 @@ a {
     width: 120px;
     float: right;
     font-size: 15px;
-    margin-right: 10px;
+    margin-right: 25px;
 }
 
 //Video Container//
 
 #video-container {
-    border: 2px solid v.$primary-colour;
-    margin: 5%;
+    width: 85%;
+    // border: 2px solid v.$primary-colour;
+    margin: 20px 0;
+    padding: 0 5px;
     position: relative;
     display: flex;
     flex-direction: column;
     background-color: v.$bg-white;
+    justify-items: center;
+    align-self: center;
 }
 
 .video-controls {
@@ -272,8 +289,6 @@ button {
     border: 0;
     background-color: transparent;
 }
-
-
 
 @media screen and (min-width: 768px) {
 
@@ -356,11 +371,11 @@ button {
     .project {
         margin-left: 4%;
         margin-bottom: 15%;
-        width: 90%;
+        width: 95%;
     }
 
     .project-thumbnail {
-        width: 320px;
+        width: 310px;
         justify-self: left;
         grid-row-start: 1;
         grid-row-end: 4;
@@ -373,7 +388,7 @@ button {
     }
 
     #project-brief {
-        width: 270px;
+        width: 290px;
         margin-left: -12%;
     }
 
@@ -464,11 +479,11 @@ button {
         .project {
             margin-left: 0;
             margin-bottom: 10%;
-            width: 95%;
+            width: 98%;
         }
     
         .project-thumbnail {
-            width: 310px;
+            width: 300px;
         }
     
         .desciption {
@@ -477,7 +492,32 @@ button {
     
         #project-brief {
             width: 220px;
-            margin-left: -7%;
+            margin-left: -8%;
+        }
+
+        .projects-title {
+            margin-top: 60%;
+        }
+    
+        .desciption p {
+            color: rgb(112, 111, 111);
+            font-size: 12px;
+            line-height: 15px;
+        }
+    
+        .categories {
+            margin-left: 0;
+            text-align: right;
+            padding-top: 5px;
+        }
+    
+        .project-button {
+            margin-top: 35%;
+
+        }
+
+        .project-button {
+            margin-right: 10px;
         }
     
       //Video//

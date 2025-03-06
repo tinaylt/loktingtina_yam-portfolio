@@ -2,7 +2,7 @@
     header("Access-Control-Allow-Origin: *");
     header("Content-Type: application/json; charset=UTF-8");
 
-    require_once('includes/connect.php');
+    require_once('includes/connect_local.php');
     $errors = array();
 
     $fname = $_POST['fname'] ?? '';

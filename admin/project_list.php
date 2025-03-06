@@ -10,7 +10,7 @@
     }
 
 
-    require_once('../includes/connect.php');
+    require_once('../includes/connect_local.php');
     $stmt = $connection->prepare('SELECT id, title FROM projects ORDER BY id ASC');
     $stmt->execute();
     

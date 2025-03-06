@@ -9,7 +9,7 @@
     header('Location: login_form.php');
     }
 
-    require_once('../includes/connect.php');
+    require_once('../includes/connect_local.php');
     $query = 'SELECT * FROM projects, media WHERE projects_id = projects.id AND projects.id =:projectId';
     $stmt = $connection->prepare($query);
     $projectId = $_GET['id'];

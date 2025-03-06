@@ -1,6 +1,6 @@
 <?php
 
-require_once('../includes/connect.php');
+require_once('../includes/connect_local.php');
 
 $random = rand(10000, 99999);
 $newname = 'image'.$random;

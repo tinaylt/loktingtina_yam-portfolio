@@ -74,6 +74,7 @@
     margin:15px 0;
     @include m.mobile-box;
     display: grid;
+    padding: 10px 20px;
 }
 
 .project-box ul {
@@ -82,7 +83,7 @@
 
 
 .project-box ul li {
-    width: 100px;
+    width: 120px;
 }
 
 .project-image {
@@ -146,7 +147,7 @@
 @media screen and (min-width: 768px) {
 
     .close-button {
-        margin-left: 50px;
+        margin-left: 50%;
     }
 
     #project-detail {
@@ -195,7 +196,7 @@
 @media screen and (min-width: 1200px) {
 
     .close-button {
-        margin-left: 60%;
+        margin-left: 70%;
         margin-top: 10px;
         width: 60px;
         height: 60px;

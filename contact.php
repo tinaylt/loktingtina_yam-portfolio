@@ -8,6 +8,13 @@
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="images/site.webmanifest" />
+
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
@@ -74,16 +81,12 @@
 
     <footer>
         <div id="footer" class="grid-con">
+            <p id="resume" class="col-start-1 col-end-3 m-col-start-1 m-col-end-7"><a href="document/resume.pdf" target="_blank">Resume</a></p>
+            <p id="linkedin" class="col-start-3 col-end-5 m-col-start-7 m-col-end-13"><a href="http://www.linkedin.com/in/tinayam">Linkedin</a></p>
+            <p class="col-span-full m-col-span-full">&#169; 2024</p>
+            <p class="col-span-full m-col-span-full">Designed by Tina Yam</p>
 
-            <div id="copyright" class="col-start-1 col-end-3 m-col-start-1 m-col-end-8">
-                <p>	&#169; 2024</p>
-            </div>
-
-            <div id="mark" class="col-start-3 col-end-5 m-col-start-10 m-col-end-13">
-                <p>Designed by Tina Yam</p>
-            </div>
         </div>
-
     </footer>
 
 </body>

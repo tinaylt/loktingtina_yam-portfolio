@@ -5,49 +5,57 @@ footer {
     background-color: v.$primary-colour;
     justify-content: center;
     align-items: center;
-    width: 100VW;
-    font-size: 15px;
+    width: 100%;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    display: block;
+
     p {
         color: v.$bg-white;
     }
 }
 
 #footer {
-    padding: 30px;
+    padding: 20px;
     position: sticky;
+    width: 100%;
 }
 
-.footer1 {
+.footer-bottom {
     display: flex;
-}
-
-.footer-right {
-    text-align: right;
+    padding: 5px 0;
 }
 
 #resume a, #linkedin a {
     color: v.$bg-white;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 #resume, #linkedin {
-    // display: inline;
-    margin: 0 5px;
+    padding-bottom: 10px;
 }
 
-
-
-
+#linkedin {
+    margin-left: auto;
+}
 
 
 
 @media screen and (min-width: 768px) {
 
-
+    footer {
+        font-size: 15px;
+    }
 
 }
 
 @media screen and (min-width: 1200px) {
 
+    #linkedin {
+        padding-right: 0;
+    }
     
 }
 
