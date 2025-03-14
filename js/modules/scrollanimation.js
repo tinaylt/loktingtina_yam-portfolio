@@ -18,7 +18,7 @@ export function scrollIndex() {
             duration: 0.5,
             autoAlpha: 0,
             stagger: 0.1,
-            each: .1,
+            // each: 1,
             ease: 'power1.inOut',
             onComplete: () => {
                 index = (index + 1) % title.length;
@@ -47,26 +47,6 @@ export function scrollIndex() {
         ease: "back",
         y: 90
     });
-
-
-    document.addEventListener("load", ()=> {
-        setupGraphic();
-        selfGraphic.src = "images/self-graphic-01.png"; 
-    });
-    
-    function setupGraphic() {
-        const selfGraphic = document.querySelector("#graphic1");
-    
-        selfGraphic.addEventListener("mouseover", ()=> {
-            selfGraphic.src = "images/self-graphic-02.png";
-            selfGraphic.classList.add('graphic2');
-        });
-    
-        selfGraphic.addEventListener("mouseout", function () {
-            selfGraphic.src = "images/self-graphic-01.png"; 
-            selfGraphic.classList.remove('graphic2');
-        });
-    }
 
     const splitProject = new SplitText('#projects h2', {type: 'words,chars'});
 
@@ -125,5 +105,39 @@ export function scrollIndex() {
             markers: false
         }
     });
+
+}
+
+export function hello() {
+
+    // window.addEventListener("load", ()=> {
+    //     setupGraphic();
+    //     selfGraphic.src = "images/self-graphic-01.png"; 
+    // });
+
+    const returnIndex = document.querySelector("#hello a");
+
+    function setupGraphic() {
+
+        const selfGraphic = document.querySelector("#graphic1");
+
+        selfGraphic.src = "images/self-graphic-01.png"; 
+    
+        selfGraphic.addEventListener("mouseover", ()=> {
+            selfGraphic.src = "images/self-graphic-02.png";
+            selfGraphic.classList.add('graphic2');
+        });
+    
+        selfGraphic.addEventListener("mouseout", ()=> {
+            selfGraphic.src = "images/self-graphic-01.png"; 
+            selfGraphic.classList.remove('graphic2');
+        });
+    }
+    setupGraphic();
+    returnIndex.addEventListener('click', function() {
+        const selfGraphic = document.querySelector("#graphic1");
+        selfGraphic();
+    });
+
 
 }
