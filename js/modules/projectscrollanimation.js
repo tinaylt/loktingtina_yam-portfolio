@@ -17,13 +17,10 @@ export function projectScrollAnimation() {
         stagger: 0.01,
     })
 
-
-    const projectSplit = new SplitText('.project-description', {type: 'words,chars'});
-    const tl = gsap.timeline();
-
-    tl.from(projectSplit.words, {
+    gsap.from(".project-description", {
         opacity: 0,
-        duration: .5,
+        duration: 1,
+        y: 90,
         ease: "back",
         stagger: 0.01
     })
@@ -57,10 +54,10 @@ export function projectScrollAnimation() {
         gsap.from(projectImage, {
             scrollTrigger: {
                 trigger: projectImage,
-                start: 'top 90%',
+                start: 'top bottom',
                 end: 'bottom top',
                 scrub: true,
-                markers: false
+                markers: true
             },
             opacity: 0,
             ease: 'power2.out',

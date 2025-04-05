@@ -13,7 +13,6 @@
 #aboutMe-close-button {
     width: 40px;
     height: 40px;
-    background-color: v.$primary-colour;
     border-radius:8px;
     display: flex;
     flex-direction: column;
@@ -24,14 +23,17 @@
 
 #aboutMe-close-button:hover {
     transform: translateY(-3px);
+    .aboutme-close {
+        background-color: v.$orange-colour;
+    }
 }
 
 .aboutme-close {
     width: 80%;
     height: 4px;
-    background-color: v.$bg-white;
+    background-color: v.$primary-colour;
     border-radius: 10px;
-    margin-left: 15%;
+    margin-left: 20%;
 }
 
 .aboutme-close:nth-child(1) {
@@ -196,7 +198,6 @@
     .aboutme-close {
         width: 80%;
         height: 4px;
-        background-color: v.$bg-white;
         border-radius: 10px;
         margin-left: 12%;
     }
@@ -252,7 +253,6 @@
     #aboutMe-close-button {
         width: 50px;
         height: 50px;
-        background-color: v.$primary-colour;
         border-radius:8px;
         display: flex;
         flex-direction: column;
@@ -269,7 +269,6 @@
     .aboutme-close {
         width: 80%;
         height: 6px;
-        background-color: v.$bg-white;
         border-radius: 10px;
     }
     

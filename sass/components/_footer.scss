@@ -34,11 +34,16 @@ footer {
 }
 
 #resume, #linkedin {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+#resume a:hover, #linkedin a:hover {
+    color: v.$orange-colour;
 }
 
 #linkedin {
     margin-left: auto;
+    padding-right: 10px;
 }
 
 
