@@ -32,14 +32,6 @@ export function aboutMeAnimation() {
         delay: .1 
     })
 
-    gsap.from('.mypic-bg', {
-        opacity: 0,
-        duration: 1,
-        delay: .4,
-        x: -1,
-        y: -1,
-        ease: 'power2.out'
-    })
 
     gsap.from(".about-me-para", {
         duration: .3,
@@ -75,17 +67,17 @@ export function aboutMeAnimation() {
         });
     });
 
-    gsap.from('#design-process', {
-        scrollTrigger: {
-            trigger: '#design-process',
-            start: 'top 70%',
-            end: 'bottom 70%',
-            scrub: .5,
-            markers: false
-        },
-        opacity: 0,
-        ease: 'power1.out'
-    })
+    // gsap.from('#design-process', {
+    //     scrollTrigger: {
+    //         trigger: '#design-process',
+    //         start: 'top 70%',
+    //         end: 'bottom 70%',
+    //         scrub: .5,
+    //         markers: false
+    //     },
+    //     opacity: 0,
+    //     ease: 'power1.out'
+    // })
 
     const designProcesslis = document.querySelectorAll('#design-process span');
 

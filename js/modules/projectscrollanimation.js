@@ -57,7 +57,7 @@ export function projectScrollAnimation() {
                 start: 'top bottom',
                 end: 'bottom top',
                 scrub: true,
-                markers: true
+                markers: false
             },
             opacity: 0,
             ease: 'power2.out',
