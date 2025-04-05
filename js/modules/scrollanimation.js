@@ -33,9 +33,9 @@ export function scrollIndex() {
 
     const tl = gsap.timeline();
     tl.from(splitIntro.chars, {
-        duration: .3,
+        duration: .2,
         opacity: 0,
-        y: 90,
+        y: 20,
         ease: "back",
         stagger: 0.01
     });
@@ -43,7 +43,7 @@ export function scrollIndex() {
     gsap.from('#hello', {
         opacity: 0,
         duration: .7,
-        delay: 1.3,
+        delay: 1,
         ease: "back",
         y: 90
     });
@@ -76,7 +76,7 @@ export function scrollIndex() {
                 end: 'top 40%',
                 scrub: 1,
                 toggleActions: "play reverse play reverse",
-                markers: true
+                markers: false
             }
         });
     });

@@ -44,33 +44,21 @@
     transform: rotate(-45deg) translate(0px, -3px);
 }
 
-#clip {
-    position: absolute;
-    z-index: 3;
-    top: -3%;
-    right: 10%;
-    width: 6%;
-}
 
 .mypic {
     position: relative;
-    margin: 30px 0 50px 0;
-}
-
-.mypic-bg {
-    width: 100%;
-    height: 100%;
-    background-color: v.$primary-colour;
-    position: absolute;
-    transform: translate(10px, 10px);
+    margin: 30px;
+    text-align: center;
 }
 
 .mypic img {
     position: relative;
+    width: 80%;
+    text-align: center;
 }
 
 .about-me-para {
-    line-height: 25px;
+    line-height: 20px;
     margin-bottom: 50px;
 }
 
@@ -83,22 +71,19 @@
 }
 
 #design-process {
-    margin: 20px 0 70px 0;
+    margin: 30px 0;
 }
 
 #design-process ul {
     margin: 0;
     padding: 0;
-    border: 1px solid v.$primary-colour;
-    padding: 0 10px;
+    padding: 0 5px;
     border-radius: 20px;
-    box-shadow: 8px 8px v.$primary-colour;
 }
 
 #design-process ul li {
-    padding: 15px;
+    padding: 5px;
     font-size: 17px;
-    border-bottom: 2px dashed v.$secondary-colour-two;
 }
 
 #design-process ul li p {
@@ -112,7 +97,7 @@
 #design-process ul li span {
     margin-right: 15px;
     font-size: 25px;
-    color: v.$primary-colour
+    color: v.$orange-colour;
 }
 
 #design-software {
@@ -196,10 +181,30 @@
     }
 
     .aboutme-close {
-        width: 80%;
-        height: 4px;
+        width: 100%;
+        height: 5px;
         border-radius: 10px;
-        margin-left: 12%;
+        margin-left: 0;
+    }
+
+    .mypic {
+        position: relative;
+        margin: 30px;
+        text-align: center;
+    }
+    
+    .mypic img {
+        width: 80%;
+    }
+
+    .about-me-para {
+        line-height: 20px;
+        margin-bottom: 0;
+        margin-top: auto;
+    }
+    
+    .about-me-para p {
+        color: v.$grey-colour;
     }
     
 
@@ -226,28 +231,30 @@
 #design-process ul {
     margin: 0;
     padding: 0;
-    border: 1px solid v.$primary-colour;
-    padding: 0 20px;
+    padding: 0 5px;
     border-radius: 20px;
-    box-shadow: 8px 8px v.$primary-colour;
 }
 
 
     #design-process ul li {
-        padding: 15px;
-        font-size: 23px;
+        font-size: 20px;
         padding-left: 7%;
     }
 
     #design-process ul li span {
-        margin-right: 35px;
-        font-size: 32px;
+        margin-right: 10px;
+        font-size: 25px;
     }
 
 }
 
 
 @media screen and (min-width: 1200px) {
+
+    #aboutme {
+        margin: 50px 10%;
+    }
+
 
 
     #aboutMe-close-button {
@@ -296,7 +303,7 @@
 
     #design-process ul li span {
         margin-right: 45px;
-        font-size: 32px;
+        font-size: 30px;
     }
 
 
