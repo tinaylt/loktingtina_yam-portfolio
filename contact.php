@@ -58,7 +58,7 @@
 
         <div id="contact-form"  class="grid-con">
             <div class="col-span-full">
-                <p>I’d love to hear from you! Whether you have questions, feedback, project inquiries, want to grab a coffee &#x2615 or just need a companion, feel free to reach out!</p>
+                <p>I'd love to hear from you! Whether you have questions, feedback, project inquiries, want to grab a coffee &#x2615 or just need a companion, feel free to reach out!</p>
             </div>
 
             <form id="contacts" class="col-span-full" method="POST">

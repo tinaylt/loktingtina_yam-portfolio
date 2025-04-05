@@ -43,7 +43,6 @@ export function projectScrollAnimation() {
             markers: false
         },
         opacity: 0,
-        x: 90,
         ease: 'elastic.out(1, 0.5)'
     });
 });

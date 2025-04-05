@@ -72,6 +72,9 @@ $stmt->execute();
     <section  id="hero">
         <h2 class="hidden">Welcome!</h2>
 
+        <div id="hero-bg">
+            <img src="images/hero-bg.png" alt="background">
+        </div>
 
             <div id="hero-section" class="grid-con">
                 <div id="hero-h3" class="col-span-full m-col-start-1 m-col-end-7 l-col-start-2 l-col-end-8">

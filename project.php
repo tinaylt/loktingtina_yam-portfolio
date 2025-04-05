@@ -12,6 +12,7 @@
     $image_array = explode(',',$row['location']);
     $stmt = null;
 ?>
+
 <html lang="en">
 
 <head>
@@ -40,96 +41,125 @@
 
 <body id="project-page">
         
-    <?php
-        echo'<section id="project-detail" class="grid-con">
-            <div class="close-button col-start-4 col-end-5 m-col-start-11 m-col-end-13">
-                <span class="close"></span>
-                <span class="close"></span>
+<?php
+    echo '<section id="project-detail" class="grid-con">
+        <div class="close-button col-start-4 col-end-5 m-col-start-11 m-col-end-13">
+            <span class="close"></span>
+            <span class="close"></span>
+        </div>
+
+        <h2 class="col-span-full m-col-span-full">'.$row['title'].'</h2>
+
+        <p class="col-span-full m-col-span-full project-description">'.$row['details'].'</p>
+
+        <div class="col-span-full m-col-span-full main-image">';
+?>
+
+<?php
+    $media = trim($image_array[0]);
+    $extension = strtolower(pathinfo($media, PATHINFO_EXTENSION));
+
+    if (in_array($extension, ['mp4', 'webm', 'ogg'])) {
+        echo '<video controls>
+                <source src="video/'.$media.'" type="video/'.$extension.'">
+                Your browser does not support the video tag.
+              </video>';
+    } else {
+        echo '<img src="images/'.$media.'" alt="Project media">';
+    }
+?>
+
+<?php
+            echo '</div>
+
+        <div class="col-span-full m-col-span-full l-col-start-1 l-col-end-7 project-box">
+            <ul>
+                <li><h3>Services:</h3></li>
+                <li><p>'.$row['service'].'</p></li>
+            </ul>
+        </div>
+
+        <div class="col-span-full m-col-span-full l-col-start-7 l-col-end-13 project-box">
+            <ul>
+                <li><h3>Year:</h3></li>
+                <li><p>'.$row['year'].'</p></li>
+            </ul>
+        </div>
+
+        <div class="col-span-full m-col-span-full project-box">
+            <ul>
+                <li><h3>Credits:</h3></li>
+                <li><p>'.$row['credit'].'</p></li>
+            </ul>
+        </div>
+
+        <div class="col-span-full m-col-span-full project-image">
+            <img src="images/'.$image_array[1].'" alt="burple project image">
+        </div>
+
+        <div id="issue" class="col-span-full m-col-span-full l-col-span-6 text-section">
+            <h3>Issue</h3>
+
+            <div class="para">
+                <div class="circle-p"></div>
+                <p>'.$row['issue1'].'</p>
             </div>
 
-            <h2 class="col-span-full m-col-span-full">'.$row['title'].'</h2>
-
-            <P class="col-span-full m-col-span-full project-description">'.$row['details'].'</P>
-
-            <div class="col-span-full m-col-span-full main-image">
-                <img src="images/'.$image_array[0].'" alt="project Main mage">
+            <div class="para">
+                <div class="square-p"></div>
+                <p>'.$row['issue2'].'</p>
             </div>
 
-            <div class="col-span-full m-col-span-full l-col-start-1 l-col-end-7 project-box">
-                <ul>
-                    <li><h3>Services:</h3></li>
-                    <li><p>'.$row['service'].'</p></li>
-                </ul>
+            <div class="para">
+                <div class="triangle-p"></div>
+                <p>'.$row['issue3'].'</p>
+            </div>
+        </div>
+
+        <div id="solution" class="col-span-full m-col-span-full l-col-span-6 text-section">
+            <h3>Solution</h3>
+
+            <div class="para">
+                <div class="circle-p"></div>
+                <p>'.$row['solution1'].'</p>
             </div>
 
-            <div class="col-span-full m-col-span-full l-col-start-7 l-col-end-13 project-box">
-                <ul>
-                    <li><h3>Year:</h3></li>
-                    <li><p>'.$row['year'].'</p></li>
-                </ul>
+            <div class="para">
+                <div class="square-p"></div>
+                <p>'.$row['solution2'].'</p>
             </div>
 
-            <div class="col-span-full m-col-span-full project-box">
-                <ul>
-                    <li><h3>Credits:</h3></li>
-                    <li><p>'.$row['credit'].'</p></li>
-                </ul>
+            <div class="para">
+                <div class="triangle-p"></div>
+                <p>'.$row['solution3'].'</p>
             </div>
+        </div>
 
-            <div class="col-span-full m-col-span-full project-image">
-                <img src="images/'.$image_array[1].'" alt="burple project image">
-                <img src="images/'.$image_array[2].'" alt="burple project image">
-            </div>
+        <div class="col-span-full m-col-span-6 project-image">';
+?>
 
-            <div id="issue" class="col-span-full m-col-span-full l-col-span-6 text-section">
-                <h3>Issue</h3>
+<?php
+    $media = trim($image_array[2]);
+    $extension = strtolower(pathinfo($media, PATHINFO_EXTENSION));
 
-                <div class="para">
-                    <div class="circle-p"></div>
-                    <p>'.$row['issue1'].'</p>
-                </div>
+    if (in_array($extension, ['mp4', 'webm', 'ogg'])) {
+        echo '<video controls>
+                <source src="video/'.$media.'" type="video/'.$extension.'">
+                Your browser does not support the video tag.
+              </video>';
+    } else {
+        echo '<img src="images/'.$media.'" alt="Project media">';
+    }
+?>
 
-                <div class="para">
-                    <div class="square-p"></div>
-                    <p>'.$row['issue2'].'</p>
-                </div>
+<?php
+    echo '</div>
 
-                <div class="para">
-                    <div class="triangle-p"></div>
-                    <p>'.$row['issue3'].'</p>
-                </div>
-            </div>
-
-            <div id="solution" class="col-span-full m-col-span-full l-col-span-6 text-section">
-                <h3>Solution</h3>
-
-                <div class="para">
-                    <div class="circle-p"></div>
-                    <p>'.$row['solution1'].'</p>
-                </div>
-
-                <div class="para">
-                    <div class="square-p"></div>
-                    <p>'.$row['solution2'].'</p>
-                </div>
-
-                <div class="para">
-                    <div class="triangle-p"></div>
-                    <p>'.$row['solution3'].'</p>
-                </div>
-            </div>
-
-
-            <div class="col-span-full m-col-span-6 project-image">
-                <img src="images/'.$image_array[3].'" alt="burple project image">
-            </div>
-
-            <div class="col-span-full m-col-span-6">
-                <img src="images/'.$image_array[4].'" alt="burple project image6">
-            </div>
-        </section>';
-
-    ?>
+        <div class="col-span-full m-col-span-6">
+            <img src="images/'.$image_array[3].'" alt="burple project image6">
+        </div>
+    </section>';
+?>
     
     <footer>
         <div id="footer" class="grid-con">

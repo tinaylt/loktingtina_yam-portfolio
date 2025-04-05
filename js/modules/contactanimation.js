@@ -2,20 +2,9 @@ export function contactAnimation() {
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(SplitText);
 
-    const mainTitleSplit = new SplitText('#connect h2', {type: 'words,chars'});
     const timeline = gsap.timeline();
     const connectSplit = new SplitText('#connect-intro', {type: 'words,chars'});
     const tl = gsap.timeline();
-
-    timeline.from(mainTitleSplit.chars, {
-        duration: 1,
-        opacity: 0,
-        y: 90,
-        rotation: 90,
-        ease: "back.out(1.7)",
-        stagger: 0.01,
-    })
-
 
     tl.from(connectSplit.words, {
         opacity: 0,
@@ -28,8 +17,28 @@ export function contactAnimation() {
     gsap.from('#contact-form', {
         opacity: 0,
         x: 90,
-        delay: .3,
+        delay: .2,
         ease: 'elastic.out(1,0.75)',
     });
+
+    gsap.from('#connect-sticker', {
+        opacity: 0,
+        delay: .3,
+    });
+
+    gsap.from('#connect-sticker1', {
+        opacity: 0,
+        duration: 1,
+        delay: .3,
+        x: -90
+    });
+
+    gsap.from('#connect-sticker3', {
+        opacity: 0,
+        duration: 1,
+        delay: .3,
+        rotate: 1,
+    });
+
 
 }

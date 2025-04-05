@@ -28,16 +28,14 @@ body {
     overflow-x: hidden;
     width: 100%;
     display: grid;
-    place-items: center; 
 }
 
 html {
-    font-family: v.$base-font-family;
     box-sizing: border-box; 
-    // height: 100%;
     margin: 0;
     overflow-x: hidden;
     width: 100%;
+    font-family: v.$base-font-family;
 }
 
 h2, h3, h4, h5, h6, p {
@@ -69,37 +67,35 @@ a {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh;
-  }
+}
 
-#hero::before {
-    content: "";
-    position: absolute;
-    background-image: url(../images/hero-bg.png);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.7;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  #hero > * {
+#hero-bg {
     position: relative;
+    height: 100vh;
     z-index: 1;
-  }
+    width: 130%;
+    
 
+    img {
+        width: 100%;
+        height: 100%;
+
+    }
+}
 
 #hero-section {
-    padding: 50px 70px;
-    margin:30px auto;
-    height: 85%;
+    padding: 0 70px;
+    margin: 0 auto;
+    height: 80%;
     align-content: center;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.91) 30%, rgba(255, 255, 255, 0)70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.831) 30%, rgba(255, 255, 255, 0) 80%);
     border-radius: 20px;
-    z-index: 3;
-    perspective: 1000px;
+    z-index: 5;
     transition: transform 0.1s ease-out;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    left: 0;
 }
 
 
@@ -341,25 +337,29 @@ button {
 
 @media screen and (min-width: 768px) {
 
-    #hero {
-        width: 100vw;
-        height: 80vh;
-    }
-
-    #hero::before {
+    #hero-bg {
+        position: relative;
+        height: 100vh;
+        z-index: 1;
         width: 100%;
-        height: 100%;
+        
+    
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     #hero-section {
-        padding: 10px 20px;
-        width: 90%;
-        height: 100%;
-        justify-content: center;
-        align-content: center;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.91) 10%, rgba(255, 255, 255, 0)90%);
+        padding: 0 100px;
+        margin: 0 auto;
+        height: 80%;
+        border-radius: 20px;
+        top: 5%;
+        left: 0;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.831) 30%, rgba(255, 255, 255, 0) 80%);
     }
-
+    
 
     #hero-h3 {
         padding-bottom: 10px;
@@ -367,7 +367,7 @@ button {
         text-align: center;
     
         h3{
-        font-size: 50px;
+        font-size: 40px;
         }
     }
 
@@ -378,7 +378,7 @@ button {
 
     #hero-p p {
         font-size: 15px;
-        line-height: 23px;
+        line-height: 25px;
         text-align: center;
     }
 
@@ -401,13 +401,13 @@ button {
         height: 280px;
         background-color: #608ec6ba;
         justify-self: center;
-        margin-top: 80px;
+        margin-top: 50px;
         border-radius: 20px;
     }
     
     #graphic1 {
         position: absolute;
-        top: 15%;
+        top: 8%;
         left: 0;
         width: 100%;
     }
@@ -441,7 +441,7 @@ button {
 
     .project {
         margin: 30px auto;
-        width: 80%;
+        width: 85%;
     }
 
     .project-thumbnail {
@@ -460,7 +460,7 @@ button {
 
     #project-brief {
         width: 300px;
-        margin-left: -10%;
+        margin-left: -15%;
         padding: 10px;
         margin-top: auto;
     }
@@ -483,7 +483,7 @@ button {
     }
 
     .project-button {
-        margin-right: 45px;
+        margin-right: 10px;
     }
 
     
@@ -498,44 +498,46 @@ button {
 
 @media screen and (min-width: 1200px) {
 
-    #hero {
-        width: 100vw;
+    #hero-bg {
+        position: relative;
         height: 100vh;
-    }
-
-    #hero::before {
+        z-index: 1;
         width: 100%;
-        height: 100%;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position-x: 10px;
+    
+        img {
+            width: 100%;
+            height: 100%;
+
+        }
     }
 
     #hero-section {
-        padding: 30px;
-        width: 100%;
-        top: -8%;
+        padding: 80px;
         height: 100%;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.91) 20%, rgba(255, 255, 255, 0)70%);
+        border-radius: 20px;
+        right: 5%;
+        max-width: 1200px;
     }
 
     #hero-h3 {
-        padding: 0;
+        padding-bottom: 10px;
         margin-bottom: 0;
-        margin-top: -5%;
+        text-align: center;
     
         h3{
-        font-size: 90px;
+        font-size: 60px;
         }
     }
 
     #hero-p {
-        margin: 0;
-        
-        p {
-            font-size: 20px;
-            line-height: 30px;
-        }
+        padding-left: 40px;
+        margin-top: 0;
+    }
+
+    #hero-p p {
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
     }
     
     #hello {
@@ -550,8 +552,8 @@ button {
 
         
     #graphic1 {
-        top: 13%;
-        left: -10%;
+        top: 6%;
+        left: -5%;
     }
     
     .graphic2 {
@@ -581,6 +583,13 @@ button {
 
     }
 
+    .desciption p {
+        font-size: 15px;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+
+
     #project-brief {
         width: 250px;
         margin-left: -5%;
@@ -593,7 +602,7 @@ button {
 
     .project-button {
         margin-right: -20%;
-        margin-top: 10px;
+        margin-top: 30px;
     }
 
     
