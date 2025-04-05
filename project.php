@@ -16,7 +16,7 @@
 
 <head>
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>Tina's Portfolio</title>
+    <title>TINA's Porject</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">

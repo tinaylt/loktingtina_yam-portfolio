@@ -16,7 +16,7 @@ export function aboutMeAnimation() {
 
     const tl = gsap.timeline();
     tl.from(aboutMeSplitTitle.chars, {
-        duration: .8,
+        duration: .5,
         opacity: 0,
         y: 90,
         rotation: 90,
@@ -41,20 +41,10 @@ export function aboutMeAnimation() {
         ease: 'power2.out'
     })
 
-    gsap.from('#clip', {
-        opacity: 0,
-        duration: 1,
-        delay: .6,
-        ease: 'power2.out',
-    })
-
-    const descSplit = new SplitText('.about-me-para p', {type: 'words,chars'});
-
-    gsap.from(descSplit.chars, {
+    gsap.from(".about-me-para", {
         duration: .3,
         opacity: 0,
         y: 20,
-        rotation: 90,
         ease: "back",
         stagger: 0.01,
         delay: .3

@@ -63,20 +63,53 @@ a {
     display: none;
 }
 
-//hero//
-
 #hero {
-    margin: 30px;
     position: relative;
-    background-color: v.$bg-white;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+#hero::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/hero-bg.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #hero > * {
+    position: relative;
     z-index: 1;
+  }
+
+
+#hero-section {
+    padding: 50px 70px;
+    margin:30px auto;
+    height: 85%;
+    align-content: center;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.91) 30%, rgba(255, 255, 255, 0)70%);
+    border-radius: 20px;
+    z-index: 3;
+    perspective: 1000px;
+    transition: transform 0.1s ease-out;
 }
 
+
 #hero-h3 {
-    margin-top: 20px;
+    margin: 0;   
 
     h3{
     font-size: v.$mobile-header-font-size;
+    letter-spacing: 3px;
+    filter: drop-shadow(5px 5px 0 #fcbb66);
     }
 }
 
@@ -87,22 +120,24 @@ a {
 
     p {
         font-size: v.$mobile-project-font-size;
-        line-height: 25px;
+        line-height: 20px;
+        color: rgb(114, 114, 114);
     }
 }
 
 #hello {
     position: relative;
-    margin-top: 70px;
-    margin-bottom: 30px;
+    margin-top: 60px;
+    margin-bottom: 10px;
     justify-self: center;
 }
 
 .graphic-box {
-    width: 280px;
-    height: 280px;
-    background-color: #608ec6ba;
+    width: 250px;
+    height: 250px;
+    background-image: linear-gradient(to bottom, #abccf6, #77a6dd, ); 
     border-radius: 20px;
+    box-shadow: rgba(172, 172, 172, 0.615) 5px 5px 0;
 }
 
 #graphic1 {
@@ -123,14 +158,21 @@ a {
 //Project section//
 
 #projects {
-    margin: 40px 0 0 0;
+    margin: 50px 0 0 0;
     z-index: 5;
 }
 
 #projects h2 {
-    margin: 80px 30px;
+    margin: 50px 30px;
     font-size: v.$mobile-header-font-size;
     color: v.$bg-white;
+    font-family: v.$base-font-family;
+    letter-spacing: 3px;
+
+    .first-letter {
+        color: v.$orange-colour;
+        font-size: 60px;
+    }
 }
 
 #grid-bg {
@@ -139,7 +181,8 @@ a {
     height: max-content;
     background-color: v.$secondary-colour-two;
     background-image: url(../images/bg-transparent.png);
-    background-size: contain;
+    background-size: 800px;
+    background-position: center;
     background-repeat: repeat-y;
     border: 0.1px solid #ffffff8c;
     position: relative;
@@ -154,10 +197,11 @@ a {
     justify-content: center;
     align-self: center;
     padding-bottom: 15px;
-    margin-top: 50px;
     margin-left: 0;
-    margin-bottom: 40%;
+    margin-bottom: 15%;
     width: 95%;
+    transform: all 5s ease;
+    cursor: pointer;
 }
 
 .project-thumbnail {
@@ -165,14 +209,18 @@ a {
     height: auto;
     align-items: center;
     justify-self: center;
+
+    img {
+        width: 100%;
+    }
 }
 
 .desciption {
-    display: none;
+    visibility: hidden;
     margin: 10px 0;
     width: 270px;
     padding: 0;
-    transition: all .5s ease-in;
+    transition: all .1s ease-in;
     margin-left: 5px;
 }
 
@@ -184,7 +232,7 @@ a {
     filter: drop-shadow(8px 8px #595959c8);
 
     .desciption {
-        display: block;
+        visibility: visible;
     }
 
     .project-thumbnail img {
@@ -193,7 +241,8 @@ a {
     }
 
     .project-button {
-        background-color: v.$primary-colour;
+        background-color: v.$orange-colour;
+        color: v.$button;
     }
 }
 
@@ -224,14 +273,14 @@ a {
 .project-button {
     background-color: grey;
     padding: 10px 5px;
-    // width: 130px;
+    width: 130px;
     text-align: center;
     border-radius: 30px;
     color: v.$bg-white;
-    width: 120px;
     float: right;
     font-size: 15px;
     margin-right: 25px;
+    transition: all .7s ease;
 }
 
 //Video Container//
@@ -292,28 +341,45 @@ button {
 
 @media screen and (min-width: 768px) {
 
-    //hero message//
-
     #hero {
-        padding-bottom: 50px;
+        width: 100vw;
+        height: 80vh;
     }
 
+    #hero::before {
+        width: 100%;
+        height: 100%;
+    }
+
+    #hero-section {
+        padding: 10px 20px;
+        width: 90%;
+        height: 100%;
+        justify-content: center;
+        align-content: center;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.91) 10%, rgba(255, 255, 255, 0)90%);
+    }
+
+
     #hero-h3 {
-        margin-top: 20px;
+        padding-bottom: 10px;
+        margin-bottom: 0;
+        text-align: center;
     
         h3{
-        font-size: 51px;
+        font-size: 50px;
         }
     }
 
     #hero-p {
-        margin-top:5px;
-        
+        padding-left: 40px;
+        margin-top: 0;
     }
 
     #hero-p p {
-        font-size: 17px;
-        line-height: 28px;
+        font-size: 15px;
+        line-height: 23px;
+        text-align: center;
     }
 
     .mobile-size {
@@ -325,14 +391,14 @@ button {
     }
     
     #hello {
-        margin-top: -3%;
+        margin-top: -15%;
         grid-row-start: 1;
         grid-row-end: 3;
     }
 
     .graphic-box {
-        width: 300px;
-        height: 300px;
+        width: 280px;
+        height: 280px;
         background-color: #608ec6ba;
         justify-self: center;
         margin-top: 80px;
@@ -341,7 +407,7 @@ button {
     
     #graphic1 {
         position: absolute;
-        top: 13%;
+        top: 15%;
         left: 0;
         width: 100%;
     }
@@ -354,50 +420,55 @@ button {
     //Project section//
 
     #projects {
-        margin: 150px 0 0 0;
+        margin: 50px 0 0 0;
     }
 
     #projects h2 {
-        margin: 50px 40px;
-        font-size: 80px;
+        margin: 50px 70px;
+        font-size: 50px;
+
+        .first-letter {
+            color: v.$orange-colour;
+            font-size: 60px;
+        }
     }
 
     #grid-bg {
-        background-size: 70%;
+        background-size: 80%;
         background-repeat: repeat;
-        padding-bottom: 150px;
+        padding-bottom: 100px;
     }
 
     .project {
-        margin-left: 4%;
-        margin-bottom: 15%;
-        width: 95%;
+        margin: 30px auto;
+        width: 80%;
     }
 
     .project-thumbnail {
         width: 310px;
         justify-self: left;
-        grid-row-start: 1;
-        grid-row-end: 4;
     }
 
     .desciption {
-        width: 270px;
+        width: 250px;
+        height: 70px;
         margin-left: 0;
         padding-left: 5px;
+        padding-right: 10px;
+
     }
 
     #project-brief {
-        width: 290px;
-        margin-left: -12%;
+        width: 300px;
+        margin-left: -10%;
+        padding: 10px;
+        margin-top: auto;
     }
 
 
     .projects-title {
-        margin-top: 60%;
         margin-left: 0;
         padding-bottom: 5px;
-        border-bottom: 1px solid rgb(157, 157, 157);
     }
 
     .desciption p {
@@ -408,20 +479,13 @@ button {
 
     .categories {
         margin-left: 0;
-        text-align: right;
         padding-top: 5px;
     }
 
     .project-button {
-        margin-top: 33%;
+        margin-right: 45px;
     }
 
-    .project:hover {
-    
-        .project-button {
-            margin-top: 5%;
-        }
-    }
     
       //Video//
 
@@ -429,96 +493,109 @@ button {
         margin: 5%;
     }
 
-    
 }
-
 
 
 @media screen and (min-width: 1200px) {
 
     #hero {
-        margin-left: -10px;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #hero::before {
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: 10px;
+    }
+
+    #hero-section {
+        padding: 30px;
+        width: 100%;
+        top: -8%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.91) 20%, rgba(255, 255, 255, 0)70%);
     }
 
     #hero-h3 {
-        margin-top: 10px;
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: -5%;
     
         h3{
-        font-size: v.$desktop-header-font-size;
+        font-size: 90px;
         }
     }
 
-    #hero-p p {
-        font-size: 20px;
-        line-height: 30px;
+    #hero-p {
+        margin: 0;
         
+        p {
+            font-size: 20px;
+            line-height: 30px;
+        }
     }
-
+    
     #hello {
-        margin-top: -7%;
-        grid-row-start: 1;
-        grid-row-end: 3;
+        margin-top: -15%;
     }
 
     .graphic-box {
-        width: 350px;
-        height: 350px;
+        width: 320px;
+        height: 320px;
+        margin-left: -10%;
     }
 
-        //Project section//
+        
+    #graphic1 {
+        top: 13%;
+        left: -10%;
+    }
+    
+    .graphic2 {
+        margin-left: 17px;
+        margin-top: 5px;
+    }
 
-        #projects {
-            margin: 150px 0 0 0;
-        }
-    
-        #projects h2 {
-            margin: 100px 100px;
-            font-size: 80px;
-        }
-    
-        .project {
-            margin-left: 0;
-            margin-bottom: 10%;
-            width: 98%;
-        }
-    
-        .project-thumbnail {
-            width: 300px;
-        }
-    
-        .desciption {
-            width: 220px;
-        }
-    
-        #project-brief {
-            width: 220px;
-            margin-left: -8%;
-        }
+    //project section//
 
-        .projects-title {
-            margin-top: 60%;
-        }
-    
-        .desciption p {
-            color: rgb(112, 111, 111);
-            font-size: 12px;
-            line-height: 15px;
-        }
-    
-        .categories {
-            margin-left: 0;
-            text-align: right;
-            padding-top: 5px;
-        }
-    
-        .project-button {
-            margin-top: 35%;
+    .project {
+        width: 100%;
+    }
 
-        }
+    #projects h2 {
+        margin: 50px 100px;
+        font-size: 60px;
 
-        .project-button {
-            margin-right: 10px;
+        .first-letter {
+            color: v.$orange-colour;
+            font-size: 70px;
         }
+    }
+
+    .project-thumbnail {
+        width: 400px;
+        justify-self: left;
+
+    }
+
+    #project-brief {
+        width: 250px;
+        margin-left: -5%;
+        padding: 10px;
+    }
+
+    .projects-title {
+        font-size: 35px;
+    }
+
+    .project-button {
+        margin-right: -20%;
+        margin-top: 10px;
+    }
+
     
       //Video//
 

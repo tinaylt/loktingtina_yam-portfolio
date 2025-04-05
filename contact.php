@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>TINA's Site</title>
+    <title>TINA's Contact</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -50,15 +50,18 @@
         </div>
     </header>
 
-    <section id="connect" class="grid-con">
-        <h2 class="col-span-full m-col-span-full">CONNECT</h2>
+    <section id="connect">
+        <h2 class="hidden">CONNECT</h2>
 
-        <div id="connect-intro" class="col-span-full m-col-span-full">
-            <p>I'd love to hear you! Whether you have questions, feedbacks, projects inquires or a cup of coffee &#x2615, feel free to reach out!  </p>
-        </div>
+        <img src="images/contact-sticker1.png" alt="sticker" id="connect-sticker">
+        <img src="images/contact-sticker3.png" alt="sticker" id="connect-sticker1">
 
-        <div id="contact-form" class="col-span-full m-col-span-full">
-            <form id="contacts" method="POST">
+        <div id="contact-form"  class="grid-con">
+            <div class="col-span-full">
+                <p>I’d love to hear from you! Whether you have questions, feedback, project inquiries, want to grab a coffee &#x2615 or just need a companion, feel free to reach out!</p>
+            </div>
+
+            <form id="contacts" class="col-span-full" method="POST">
                 <label for="fname">First Name:</label><br>
                 <input type="text" name="fname" id="fname">
                 <br><br>
@@ -72,10 +75,12 @@
                 <textarea name="message" id="message"></textarea>
                 <br>
                 <input type="submit" value="Submit" id="send-button">
-                <section id="feedback"></section>
+                <section id="feedback" class="col-span-full m-col-span-full"></section>
             </form>
+
             
         </div>
+            <img src="images/contact-sticker2.png" alt="sticker" id="connect-sticker3">
 
     </section>
 

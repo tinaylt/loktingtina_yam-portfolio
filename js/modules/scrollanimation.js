@@ -15,14 +15,14 @@ export function scrollIndex() {
         const split = new SplitText(h3Title, { type: 'chars' });
     
         gsap.from(split.chars, {
-            duration: 0.5,
+            duration: 0.2,
             autoAlpha: 0,
             stagger: 0.1,
             // each: 1,
             ease: 'power1.inOut',
             onComplete: () => {
                 index = (index + 1) % title.length;
-                setTimeout(changeTitle, 2000);
+                setTimeout(changeTitle, 1200);
             }
         });
     }
@@ -33,7 +33,7 @@ export function scrollIndex() {
 
     const tl = gsap.timeline();
     tl.from(splitIntro.chars, {
-        duration: 1,
+        duration: .3,
         opacity: 0,
         y: 90,
         ease: "back",
@@ -68,15 +68,15 @@ export function scrollIndex() {
         gsap.from(project, {
             opacity: 0,
             x: index % 2 === 0 ? -30 : 30,
-            duration: 1.5,
-            ease: 'elastic.inOut(1.2, 0.75)',
+            duration: .8,
+            ease: 'elastic.inOut(1, 0.86)',
             scrollTrigger: {
                 trigger: project,
-                start: 'top 85%',
-                end: 'top 20%',
+                start: 'top 90%',
+                end: 'top 40%',
                 scrub: 1,
                 toggleActions: "play reverse play reverse",
-                markers: false
+                markers: true
             }
         });
     });
@@ -129,8 +129,8 @@ export function hello() {
         });
     
         selfGraphic.addEventListener("mouseout", ()=> {
-            selfGraphic.src = "images/self-graphic-01.png"; 
             selfGraphic.classList.remove('graphic2');
+            selfGraphic.src = "images/self-graphic-01.png"; 
         });
     }
     setupGraphic();

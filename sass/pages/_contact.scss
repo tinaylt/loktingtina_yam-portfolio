@@ -4,206 +4,237 @@
 
 #connect {
     // min-height: 100vh;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 30px;
-    margin: 0 30px;
+    margin: 0 25px;
+    position: relative;
 
-    h2 {
-        padding-bottom: 20px;
-        font-size: v.$mobile-projectpage-header;
-    }
-
-    h2, p {
-        margin: 0 10px;
-        line-height: 23px;
-    }
 }
 
-#connect-intro {
-    justify-items: center;
-    align-self: center;
+#connect-sticker {
+    position: absolute;
+    z-index: 10;
+    width: 65%;
+    left: 3%;
+    filter: drop-shadow(5px 5px 0 rgba(96, 96, 96, 0.536));
+    transform: rotate(-10deg);
 }
 
 #contact-form {
-    margin: 30px 0px 30px 0px;
-    justify-content: center;
-    align-self: center;
-    display: flex;
-    @include m.mobile-box;
-    border: 2px solid v.$primary-colour;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 8px;
-    padding-right: 8px;
-    
+    padding: 90px 30px;
+    margin-top: 20%;
+    margin-bottom: 35%;
+    background-color: #b1cbe8;
+    border-radius: 20px;
+    z-index: 5;
+
+    p {
+        color: v.$grey-colour;
+        padding-bottom: 20px;
+        font-size: v.$mobile-project-categories;
+        line-height: 25px;
+
+    }
 
     form {
         width: 100%;
-        padding: 15px;
+        padding: 5px 0;
         height: auto;
-        font-weight: 600;
-        font-size: 13px;
+        font-weight: 500;
+        font-size: v.$mobile-project-categories;
+        color: v.$grey-colour;
     }
 
     label {
         padding-bottom: 10px;
-        color: v.$primary-colour;
     }
 
     input, textarea {
         margin: 10px 0;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        background-color: transparent;
-        border-bottom: 2px solid v.$primary-colour;;
-    }
-
-    input[type=text]:focus, input[type=email]:focus, textarea:focus {
-        background-color: v.$secondary-colour-two;
-        padding: 5px;
-        color: v.$bg-white;
-        font-size: 20px;
-        font-family: v.$base-font-family;
-        line-height: 25px;
-    }
-
-
-    input {
         width: 100%;
-        height: 20px;
-        font-size: 15px;
-        color: v.$grey-colour;
-    }
-
-    
-    textarea {
-        width: 100%;
-        height: 200px;
-        font-size: 15px;
-        color: v.$grey-colour;
+        height: 30px;
+        border-radius: 20px;
+        border: none;
     }
 
     #send-button {
-        width: 120px;
+        width: 150px;
         height: 35px;
         border-radius: 50px;
         cursor: pointer;
         float: right;
         box-shadow: none;
-        background-color: v.$primary-colour;
+        background-color: v.$grey-colour;
         color: v.$bg-white;
         font-size: 15px;
+        transform: all 1s ease;
     }
 
     #send-button:hover {
-        box-shadow: 3px 3px v.$grey-colour;
-        border: 1px solid v.$bg-white;
+        background: linear-gradient(to bottom, v.$orange-colour, rgb(210, 128, 28));
     }
-}
+
+    input[type=text]:focus, input[type=email]:focus, textarea:focus {
+        background-color: v.$bg-white;
+        padding: 5px;
+        color: v.$orange-colour;
+        font-size: v.$mobile-project-categories;
+        font-family: v.$base-font-family;
+        line-height: 25px;
+    }
+
+        input {
+        width: 100%;
+        padding: 5px;
+        font-size: 15px;
+        color: v.$primary-colour;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 10px 5px;
+        height: 200px;
+        font-size: 15px;
+        color: v.$primary-colour;
+    }
+
     #feedback p {
         padding: 5px 0;
         margin: 0;
-        font-size: 12px;
-        line-height: 13px;
-        color: rgb(245, 139, 9);
+        font-size: 13px;
+        line-height: 7px;
+        color: v.$primary-colour;
     }
+
+}
+
+#connect-sticker1 {
+    position: absolute;
+    top: 40%;
+    width: 30%;
+    right: -12%;
+    transform: rotate(60deg);
+    filter: drop-shadow(5px 5px 0 rgba(96, 96, 96, 0.536));
+}
+
+#connect-sticker3 {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 40%;    
+    transform: rotate(20deg);
+    filter: drop-shadow(-5px 5px 0 rgba(96, 96, 96, 0.536));
+}
+
+
 
 @media screen and (min-width: 768px) {
 
-    #connect {
-        margin: 0 60px;
+
+
+#connect {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    margin: 0 80px;
+}
+
+    #connect-sticker {
+        z-index: 10;
+        width: 50%;
+        left: 3%;
     }
 
-    #connect h2 {
-        font-size: v.$desktop-project-title;
-        margin-bottom: 30px;
-    } 
-
-    #connect p {
-        font-size: v.$desktop-projectpage-body;
-        line-height: 30px;
+    #connect-sticker1 {
+        top: 40%;
+        width: 20%;
+        right: -8%;
     }
-
-    #connect-intro {
-        justify-items: center;
-        align-self: center;
-    }
-
     
+    #connect-sticker3 {
+        bottom: 10%;
+        left: 0;
+        width: 25%;    
+    }
+
     #contact-form {
-        margin: 30px 0 30px 0;
-        
+        padding: 80px 40px;
+        margin-top: 20%;
+        margin-bottom: 30%;
     
-        form {
-            width: 100%;
-            padding: 30px;
-            font-size: 17px;
-        }
-    
-        input {
-            width: 100%;
-            height: 20px;
-        }
-    
-        textarea {
-            width: 100%;
-            margin-bottom: 15px;
-        }
-
         #send-button {
-            width: 150px;
+            width: 180px;
             height: 40px;
             font-size: 18px;
         }
-    }
 
-    #feedback p {
-        font-size: 15px;
-        line-height: 15px;
+        #feedback {
+            padding: 10px;
+        }
+    
+        #feedback p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 7px;
+            color: v.$primary-colour;
+        }
+    
     }
+    
     
 }
 
 @media screen and (min-width: 1200px) {
 
     #connect {
-        margin: 0 150px;
-    }
-
-    #connect-intro {
-        justify-items: center;
-        align-self: center;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        // margin: 0 200px;
+        width: 900px;
     }
     
-    #contact-form {
-        margin: 30px 0 30px 0;
+        #connect-sticker {
+            z-index: 10;
+            width: 35%;
+            left: 3%;
+        }
+    
+        #connect-sticker1 {
+            top: 40%;
+            width: 20%;
+            right: -8%;
+        }
         
-    
-        form {
-            width: 100%;
-            padding: 30px;
+        #connect-sticker3 {
+            bottom: 10%;
+            left: 0;
+            width: 25%;    
         }
     
-        input {
-            width: 100%;
-            height: 20px;
-        }
-    
-        textarea {
-            width: 100%;
-        }
+        #contact-form {
+            padding:100px 40px;
+            margin-top: 13%;
+            margin-bottom: 30%;
 
-        #send-button {
-            width: 180px;
-            height: 45px;
-    }
-}
-
-#feedback p {
-    font-size: 17px;
-    line-height: 19px;
-}
+            label, p {
+                font-size: 18px;
+            }
+            
+        
+            #send-button {
+                width: 180px;
+                height: 40px;
+                font-size: 18px;
+            }
+        
+            #feedback p {
+                padding: 5px 10px;
+                margin: 0;
+                font-size: 15px;
+                line-height: 7px;
+                color: v.$primary-colour;
+            }
+        
+        }
 
 
 }
