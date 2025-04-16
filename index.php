@@ -73,7 +73,7 @@ $stmt->execute();
         <h2 class="hidden">Welcome!</h2>
 
         <div id="hero-bg">
-            <img src="images/hero-bg.png" alt="background">
+            <img src="images/hero-bg.jpg" alt="background">
         </div>
 
             <div id="hero-section" class="grid-con">
