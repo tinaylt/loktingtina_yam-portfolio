@@ -126,6 +126,7 @@ export function hello() {
         selfGraphic.addEventListener("mouseover", ()=> {
             selfGraphic.src = "images/self-graphic-02.png";
             selfGraphic.classList.add('graphic2');
+            
         });
     
         selfGraphic.addEventListener("mouseout", ()=> {
@@ -135,8 +136,7 @@ export function hello() {
     }
     setupGraphic();
     returnIndex.addEventListener('click', function() {
-        const selfGraphic = document.querySelector("#graphic1");
-        selfGraphic();
+        setupGraphic();
     });
 
 

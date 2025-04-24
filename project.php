@@ -160,15 +160,17 @@
         </div>
     </section>';
 ?>
-    
-    <footer>
-        <div id="footer" class="grid-con">
-            <p id="resume" class="col-start-1 col-end-3 m-col-start-1 m-col-end-7"><a href="document/resume.pdf" target="_blank">Resume</a></p>
-            <p id="linkedin" class="col-start-3 col-end-5 m-col-start-7 m-col-end-13"><a href="http://www.linkedin.com/in/tinayam">Linkedin</a></p>
-            <p class="col-span-full m-col-span-full">&#169; 2024</p>
-            <p class="col-span-full m-col-span-full">Designed by Tina Yam</p>
 
+    <footer>
+        <div id="footer">
+            <div id="more-info">
+                <p id="resume"><a href="document/resume.pdf" target="_blank">Resume</a></p>
+                <p id="linkedin"><a href="http://www.linkedin.com/in/tinayam">Linkedin</a></p>
+             </div>
+            <p>&#169; 2024</p>
+            <p>Designed by Tina Yam</p>
         </div>
     </footer>
+
 </body>
 </html>

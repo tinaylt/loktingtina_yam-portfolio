@@ -10,7 +10,6 @@
     border-radius: 10px;
     margin-left: 30px;
     margin-top: -10px;
-    cursor: pointer;
 }
 
 .close-button:hover {
@@ -39,16 +38,17 @@
 
 #project-page {
     background-color: v.$secondary-colour-two;
-    margin: 3px;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
 }
 
 #project-detail {
     background-color: v.$bg-white;
-    margin: 10px;
+    margin: 10px 15px 10px 10px;
     padding: 50px 30px;
     border-radius: 10px;
-    max-width: 100vw;
+    max-width: 100%;
 
     p {
         color: v.$grey-colour;
@@ -167,7 +167,7 @@
     }
 
     #project-detail {
-        margin: 10px;
+        margin: 10px 25px 10px 15px;
         padding: 80px;
     }
 
@@ -224,7 +224,7 @@
     }
 
     #project-detail {
-        margin: 10px 20px;
+        margin: 20px 25px 10px 15px;
         padding: 50px 120px;
     }
 

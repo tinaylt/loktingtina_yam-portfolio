@@ -5,7 +5,8 @@ footer {
     background-color: v.$primary-colour;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100vw;
+    min-width: 100vw;
     font-size: 13px;
     margin: 0;
     padding: 0;
@@ -20,6 +21,11 @@ footer {
     padding: 20px;
     position: sticky;
     width: 100%;
+    margin: 0;
+}
+
+#more-info {
+    display: flex;
 }
 
 .footer-bottom {
@@ -59,7 +65,7 @@ footer {
 @media screen and (min-width: 1200px) {
 
     #linkedin {
-        padding-right: 0;
+        padding-right: 20px;
     }
     
 }
